@@ -1,0 +1,71 @@
+body {
+    background-color: #FFF2F2;
+    z-index: 1;
+}
+
+.background_image {
+    justify-content: center;
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 50%;
+    height: auto;
+    z-index: -1;
+}
+
+.get_started {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+}
+
+button {
+    font-family: "Knewave", serif;
+    width: 150px;
+    height: 60px;
+    border: 3px solid #C31717;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: #FFF2F2;
+    font-size: 1.2em;
+    font-weight: 450;
+}
+
+button:hover {
+    background: #C31717;
+    color: white;
+    font-size: 1.3em;
+}
+
+.Quotes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.Quotes > div {
+    flex: 1;
+    text-align: center;
+    margin: 0 1rem;
+}
+
+.quoteOne {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.quoteTwo {
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 20px;
+}
+
+h2 {
+    font-family: serif;
+    color: #C31717;
+}
