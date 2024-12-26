@@ -1,9 +1,10 @@
 /* Styles for the container element */
+body {
+    justify-items: center;
+}
+
 .container {
     max-width: 900px; /* Set maximum width for the container */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 40px; /* Add padding inside the container */
-    margin-top: 10%; /* Set top margin as a percentage of the viewport height */
     overflow: hidden; /* Hide any overflowing content */
 }
 
@@ -16,24 +17,10 @@
     font-size: 17px; /* Set font size */
 }
 
-/* Styles for the grid layout of the signup form */
-.signup-grid {
-    display: grid; /* Use grid layout for the element */
-    grid-template-columns: 0.1fr 1.5fr 8fr; /* Define columns with fractional widths */
-    grid-gap: 10px; /* Set the gap between grid items */
-}
-
 /* Styles for the main signup text */
 .signup-text {
     margin-top: 30px; /* Add top margin */
-    grid-column: 1 / 4; /* Span across all three columns */
     text-align: center; /* Center-align text */
-}
-
-/* Styles for additional signup text */
-.signup-text1 {
-    grid-column: -1 / 3; /* Span from second to third column from the end */
-    text-align: right; /* Right-align text */
 }
 
 .signup-text1 span {
@@ -42,17 +29,10 @@
     cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-/* Styles for the signup form section */
-.signup-form {
-    grid-column: 2 / 4; /* Span from second to fourth column */
-}
-
 /* Styles for the overall signup container */
-.signup {
-    flex: 1; /* Use flexible layout to fill available space */
+.signup-page{
     background-color: #fff; /* Set background color to white */
     padding: 40px; /* Add padding inside the element */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a box shadow with opacity */
 }
 
 /* Styles for the signup heading */
@@ -70,6 +50,10 @@
 }
 
 /* Styles for form groups in the signup form */
+.form {
+    justify-items: center;
+}
+
 .form-group {
     margin-bottom: 20px; /* Add bottom margin to form groups */
 }
@@ -82,7 +66,6 @@
 
 /* Styles for form controls in the signup form */
 .form-control {
-    width: 40%; /* Set width of form controls */
     padding: 8px; /* Add padding inside form controls */
     font-size: 16px; /* Set font size */
     border: 1px solid #ccc; /* Add border with color */
@@ -91,12 +74,12 @@
 
 /* Styles for button group in the signup form */
 .btn-group {
-    margin-top: .0001px; /* Add a small top margin to button group */
     margin-bottom: 20px; /* Add bottom margin to button group */
 }
 
 /* Styles for buttons in the signup form */
 .btn {
+    margin: 5px;
     padding: 10px 20px; /* Set padding for buttons */
     font-size: 16px; /* Set font size for buttons */
     border: none; /* Remove button borders */
