@@ -1,9 +1,14 @@
 /* Styles for the main container */
+body {
+    justify-items: center;
+}
+
 .container {
-    max-width: 900px; /* Maximum width of the container */
-    margin: 0 auto; /* Center the container horizontally */
+    margin-top: 10%;
+    max-width: 400px; /* Maximum width of the container */
+    justify-content: center;
+    align-items: center;
     padding: 40px; /* Padding inside the container */
-    margin-top: 10%; /* Top margin of 10% */
 }
 
 /* Styles for form groups */
@@ -20,7 +25,6 @@
 
 /* Styles for form controls */
 .form-control {
-    width: 40%; /* Width of form controls */
     padding: 8px; /* Padding inside form controls */
     font-size: 16px; /* Font size of form controls */
     border: 1px solid #ccc; /* Border around form controls */
@@ -29,12 +33,12 @@
 
 /* Styles for button groups */
 .btn-group {
-    margin-top: .0001px; /* Top margin for spacing above button groups */
-    margin-bottom: 20px; /* Bottom margin for spacing below button groups */
+    margin-bottom: 20px;
 }
 
 /* Styles for buttons */
 .btn {
+    margin: auto 10px;
     padding: 10px 20px; /* Padding inside buttons */
     font-size: 16px; /* Font size of buttons */
     border: none; /* No border for buttons */
