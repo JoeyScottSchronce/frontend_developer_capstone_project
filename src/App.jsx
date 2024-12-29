@@ -1,7 +1,7 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom'; /* , Routes, Route */
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
-//import LandingPage from './Components/Landing_Page/LandingPage';
+import LandingPage from './Components/LandingPage/LandingPage';
 //import Login from './Components/Login/Login';
 //import Signup from './Components/Sign_up/Signup';
 
@@ -10,11 +10,11 @@ function App() {
     <>
       <BrowserRouter>
         <Navbar />
-        {/*<Routes>
+        <Routes>
           <Route path="/" element={<LandingPage />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Signup" element={<Signup />} />
-        </Routes>*/}
+          {/* <Route path="/Login" element={<Login />} />
+          <Route path="/Signup" element={<Signup />} /> */}
+        </Routes>
       </BrowserRouter>
     </>
   );

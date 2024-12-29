@@ -25,7 +25,7 @@ function Navbar() {
                 <ul className="nav__links active">
                     {/* List item for the 'Home' link */}
                     <li className="link">
-                        <Link to="/Landing_Page/LandingPage.html">Home</Link>
+                        <Link to="/LandingPage/LandingPage">Home</Link>
                     </li>
                     {/* List item for the 'Appointments' link */}
                     <li className="link">
