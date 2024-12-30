@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-    max-width: 900px; /* Set maximum width for the container */
+    /* max-width: 800px; /* Set maximum width for the container */
     overflow: hidden; /* Hide any overflowing content */
 }
 
@@ -14,7 +14,7 @@ body {
     top: -39px; /* Move the element 39 pixels up */
     left: 92%; /* Move the element 92% to the right */
     cursor: pointer; /* Change cursor to pointer on hover */
-    font-size: 17px; /* Set font size */
+    font-size: 1.5rem; /* Set font size */
 }
 
 /* Styles for the main signup text */
@@ -45,7 +45,7 @@ body {
 
 /* Styles for the role text in signup */
 .signup-role {
-    font-size: 16px; /* Set font size */
+    font-size: 1rem; /* Set font size */
     margin-bottom: 10px; /* Add bottom margin */
 }
 
@@ -75,13 +75,15 @@ body {
 /* Styles for button group in the signup form */
 .btn-group {
     margin-bottom: 20px; /* Add bottom margin to button group */
+    min-width: 300px;
 }
 
 /* Styles for buttons in the signup form */
 .btn {
-    margin: 5px;
-    padding: 10px 20px; /* Set padding for buttons */
-    font-size: 16px; /* Set font size for buttons */
+    margin: .5rem;
+    padding: 1em; /* Set padding for buttons */
+    font-size: 1rem; /* Set font size for buttons */
+    max-width: 100px;
     border: none; /* Remove button borders */
     border-radius: 4px; /* Add border radius for rounded corners */
     cursor: pointer; /* Change cursor to pointer on hover */
