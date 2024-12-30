@@ -14,7 +14,7 @@ function Login() {
                         <h2>Login</h2>
                     </div>
                     {/* Additional login text with a link to Sign Up page */}
-                    <div class="login-text"> Are you a new member? <span><Link to="/Sign_up"> Sign Up Here</Link></span>
+                    <div class="login-text"> Are you a new member? <span><Link to="/Signp"> Sign Up Here</Link></span>
                     </div><br />
                     {/* Div for login form */}
                     <div class="login-form">
