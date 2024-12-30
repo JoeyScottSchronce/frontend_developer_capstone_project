@@ -25,7 +25,7 @@ function Navbar() {
                 <ul className="nav__links active">
                     {/* List item for the 'Home' link */}
                     <li className="link">
-                        <Link to="/LandingPage/LandingPage">Home</Link>
+                        <Link to="/LandingPage">Home</Link>
                     </li>
                     {/* List item for the 'Appointments' link */}
                     <li className="link">
@@ -33,13 +33,13 @@ function Navbar() {
                     </li>
                     {/* List item for the 'Sign Up' link with a button */}
                     <li className="link">
-                        <Link to="/Sign_up/Sign_up.html">
+                        <Link to="/Sign_up">
                             <button className="btn1">Sign Up</button>
                         </Link>
                     </li>
                     {/* List item for the 'Login' link with a button */}
                     <li className="link">
-                        <Link to="/Login/Login.html">
+                        <Link to="/Login">
                             <button className="btn1">Login</button>
                         </Link>
                     </li>
