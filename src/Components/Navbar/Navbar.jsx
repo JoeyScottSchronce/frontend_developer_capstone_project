@@ -95,18 +95,36 @@ function Navbar() {
                         <li className="link">
                             <Link to="#" onClick={hideMenu}>Appointments</Link>
                         </li>
-                        {/* List item for the 'Sign Up' link with a button */}
+                        {/* List item for the 'Health Blog' link */}
                         <li className="link">
-                            <Link to="/SignUp" onClick={hideMenu}>
-                                <button className="btn1">Sign Up</button>
-                            </Link>
+                            <Link to="/healthblog" onClick={hideMenu}>Health Blog</Link>
                         </li>
-                        {/* List item for the 'Login' link with a button */}
+                        {/* List item for the 'Reviews' link */}
                         <li className="link">
-                            <Link to="/Login" onClick={hideMenu}>
-                                <button className="btn1">Login</button>
-                            </Link>
+                            <Link to="/reviews" onClick={hideMenu}>Reviews</Link>
                         </li>
+                        {isLoggedIn?(
+                            <>
+                                <li className="link">
+                                    <button className="btn2" onClick={handleLogout}>Logout</button>
+                                </li>
+                            </>
+                        ) : (
+                            <>
+                                {/* List item for the 'Sign Up' link with a button */}
+                                <li className="link">
+                                    <Link to="/SignUp" onClick={hideMenu}>
+                                        <button className="btn1">Sign Up</button>
+                                    </Link>
+                                </li>
+                                {/* List item for the 'Login' link with a button */}
+                                <li className="link">
+                                    <Link to="/Login" onClick={hideMenu}>
+                                        <button className="btn1">Login</button>
+                                    </Link>
+                                </li>
+                            </>
+                        )}
                     </ul>
                 )}
             </nav>
