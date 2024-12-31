@@ -38,7 +38,7 @@ function Navbar() {
                 {/* Navigation logo section */}
                 <div className="nav__logo">
                     {/* Link to the home page */}
-                    <Link to="/" onClick={toggleMenu}>
+                    <Link to="/">
                         Stay Healthy
                         {/* Insert an SVG icon of a doctor with a stethoscope */}
                         <img src="https://cdn.pixabay.com/photo/2021/11/20/03/17/doctor-6810751_1280.png" alt="doctor with a stethoscope" height="35" width="35" />
