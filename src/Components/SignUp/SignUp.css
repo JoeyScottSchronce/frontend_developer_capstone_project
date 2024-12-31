@@ -6,6 +6,7 @@ body {
 .container {
     /* max-width: 800px; /* Set maximum width for the container */
     overflow: hidden; /* Hide any overflowing content */
+    margin-top: 5%;
 }
 
 /* Styles for the password visibility icon */
