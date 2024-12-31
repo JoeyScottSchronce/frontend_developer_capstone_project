@@ -4,11 +4,9 @@ import './Navbar.css';
 
 function Navbar() {
     const [isDisplayed, setIsDisplayed] = useState(false);
-    const [click, setClick] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState("");
     const[email,setEmail]=useState("");
-    const handleClick = () => setClick(!click);
 
     const handleLogout = () => {
         sessionStorage.removeItem("auth-token");
