@@ -4,6 +4,40 @@ import './Navbar.css';
 
 function Navbar() {
     const [isDisplayed, setIsDisplayed] = useState(false);
+    const [click, setClick] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [username, setUsername] = useState("");
+    const[email,setEmail]=useState("");
+    const handleClick = () => setClick(!click);
+
+    const handleLogout = () => {
+        sessionStorage.removeItem("auth-token");
+        sessionStorage.removeItem("name");
+        sessionStorage.removeItem("email");
+        sessionStorage.removeItem("phone");
+        // remove email phone
+        localStorage.removeItem("doctorData");
+        setIsLoggedIn(false);
+        // setUsername("");
+
+        // Remove the reviewFormData from local storage
+        for (let i = 0; i < localStorage.length; i++) {
+            const key = localStorage.key(i);
+            if (key.startsWith("reviewFormData_")) {
+              localStorage.removeItem(key);
+            }
+        }
+        setEmail('');
+        window.location.reload();
+    }
+    
+    useEffect(() => { 
+        const storedemail = sessionStorage.getItem("email");
+        if (storedemail) {
+            setIsLoggedIn(true);
+            setUsername(storedemail);
+        }
+    }, []);
 
     useEffect(() => {
         const handleResize = () => {
