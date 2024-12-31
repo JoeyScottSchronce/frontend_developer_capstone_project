@@ -1,9 +1,4 @@
-/** 
- * Following code has been commented with appropriate comments for your reference.
- * Styling for the Header Navbar
- */
 
-/* Styling for the main navigation bar */
 nav {
     padding: 1.5rem;
     position: fixed;
@@ -15,51 +10,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
-}
-
-/* Styling for the dropdown menu */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    z-index: 1;
-    display: none;
-    min-width: 120px;
-    padding: 8px 0;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-}
-
-/* Styling for the user welcome message */
-.welcome-user {
-    position: relative;
-    cursor: pointer;
-}
-
-/* Display dropdown menu on hover */
-.welcome-user:hover .dropdown-menu {
-    display: block;
-}
-
-/* Styling for the items in the dropdown menu */
-.dropdown-menu li {
-    display: block;
-    width: 150px;
-    padding:5px;
-}
-
-/* Styling for links in the dropdown menu */
-.dropdown-menu li a {
-    color: #333;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-/* Hover effect for links in the dropdown menu */
-.dropdown-menu li a:hover {
-    color: #2190ff;
-}
+} 
 
 /* Styling for the logo in the navbar */
 .nav__logo {
@@ -84,13 +35,6 @@ nav {
     gap: 1rem;
     font-size: 1rem;
     font-weight: 500;
-}
-
-/* Styling for individual links in the navigation */
-.link a {
-    padding: 0 1rem;
-    color: #0d213f;
-    transition: 0.3s;
 }
 
 /* Hover effect for individual links in the navigation */
@@ -131,7 +75,7 @@ nav {
         border-radius: 0.5rem;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         z-index: 999;
-        animation: slideDown 0.5s ease-in-out; /* Animation effect */
+        animation: slideDown 0.3s ease-in-out; /* Animation effect */
     }
 }
 
@@ -147,20 +91,7 @@ nav {
     }
 }
 
-/* Button styles */
 .btn1 {
-    border: 2px solid #3685fb;
-    background-color: white;
-    color: black;
-    border-radius: 50px;
-}
-
-.btn1:hover {
-    background-color: #3685fb; /* Hover effect */
-    color: white; /* Hover effect */
-}
-
-.btn2 {
     border: 2px solid #3685fb;
     background-color: white;
     color: black;
@@ -172,7 +103,7 @@ nav {
     margin-top:3px; /* Margin from top */
 }
 
-.btn2:hover {
+.btn1:hover {
     background-color:#3685fb; /* Hover effect */
     color:white; /* Hover effect */
 }
