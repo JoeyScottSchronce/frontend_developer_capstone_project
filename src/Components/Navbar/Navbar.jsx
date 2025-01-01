@@ -6,7 +6,7 @@ function Navbar() {
     const [isDisplayed, setIsDisplayed] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState("");
-    const[email,setEmail]=useState("");
+    const[email, setEmail]=useState("");
 
     const handleLogout = () => {
         sessionStorage.removeItem("auth-token");
@@ -109,7 +109,7 @@ function Navbar() {
                                 <li className="link">
                                     <button className="btn1" onClick={handleLogout}>Logout</button>
                                 </li>
-                            </>
+                            </> 
                         ) : (
                             <>
                                 {/* List item for the 'Sign Up' link with a button */}

@@ -42,6 +42,11 @@ nav {
     color: #3685fb;
 }
 
+.Username {
+    color: #3685fb;
+    font-weight: 700;
+}
+
 /* Media queries for mobile responsiveness */
 @media (max-width: 768px) {
     .nav__logo {
