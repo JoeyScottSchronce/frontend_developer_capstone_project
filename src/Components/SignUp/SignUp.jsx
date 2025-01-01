@@ -50,14 +50,14 @@ function SignUp() {
     // JSX to render the Sign Up form
 
     return (
-        <div class="container">
+        <div className="container">
             <div>
-                <div class="signup-text">
+                <div className="signup-text">
                     <h1>Sign Up</h1>
                 </div> 
-                <div class="signup-text1"> Already a member? <span><Link to="/Login"> Login</Link></span>
+                <div className="signup-text1"> Already a member? <span><Link to="/Login"> Login</Link></span>
                 </div>
-                <div class="signup-page">
+                <div className="signup-page">
                     <form method="POST" onSubmit={register}>
 
                     <div className="form-group">
@@ -72,13 +72,13 @@ function SignUp() {
                             {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>}
                         </div>
 
-                        <div class="form-group">
-                            <label for="phone">Phone</label>
+                        <div className="form-group">
+                            <label htmlFor="phone">Phone</label>
                             <input value={phone} onChange={(e) => setPhone(e.target.value)}
                             type="tel"
                             name="phone"
                             id="phone"
-                            required class="form-control"
+                            required className="form-control"
                             placeholder="Enter your phone number"
                             aria-describedby="helpId"
                             />
@@ -97,21 +97,21 @@ function SignUp() {
                             {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>}
                         </div>
 
-                        <div class="form-group">
-                            <label for="password">Password</label>
+                        <div className="form-group">
+                            <label htmlFor="password">Password</label>
                             <input value={password} onChange={(e) => setPassword(e.target.value)}
                             name="password"
                             id="password"
-                            required class="form-control"
+                            required className="form-control"
                             placeholder="Enter your password"
                             aria-describedby="helpId"
                             />
                             {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>}
                         </div>
 
-                        <div class="btn-group"> {/* Button group for form submission and reset */}
-                            <button type="submit" class="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button> {/* Submit button */}
-                            <button type="reset" class="btn btn-danger mb-2 waves-effect waves-light">Reset</button> {/* Reset button */}
+                        <div className="btn-group"> {/* Button group for form submission and reset */}
+                            <button type="submit" classNameName="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button> {/* Submit button */}
+                            <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">Reset</button> {/* Reset button */}
                         </div>
                     </form> {/* End of the form */}
                 </div>
