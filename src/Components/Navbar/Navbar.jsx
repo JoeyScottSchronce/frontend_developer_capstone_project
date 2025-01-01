@@ -95,6 +95,9 @@ function Navbar() {
                         <li className="link">
                             <Link to="/reviews" onClick={hideMenu}>Reviews</Link>
                         </li>
+                        <li className="link">
+                            <Link to="/InstantConsultation" onClick={hideMenu}>Instant Consultation</Link>
+                        </li>
                         {isLoggedIn ? (
                             <>
                                 <li className="Username">
