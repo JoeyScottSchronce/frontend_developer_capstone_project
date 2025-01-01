@@ -110,7 +110,7 @@ function SignUp() {
                         </div>
 
                         <div className="btn-group"> {/* Button group for form submission and reset */}
-                            <button type="submit" classNameName="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button> {/* Submit button */}
+                            <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button> {/* Submit button */}
                             <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">Reset</button> {/* Reset button */}
                         </div>
                     </form> {/* End of the form */}
