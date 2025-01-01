@@ -103,6 +103,9 @@ function Navbar() {
                         </li>
                         {isLoggedIn?(
                             <>
+                                <li className="Username">
+                                    <span id="username">{username}</span>
+                                </li>
                                 <li className="link">
                                     <button className="btn1" onClick={handleLogout}>Logout</button>
                                 </li>
