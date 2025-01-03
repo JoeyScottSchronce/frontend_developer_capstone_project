@@ -1,5 +1,6 @@
-const mongoose = require('mongoose');
-const mongoURI =  "mongodb://root:TRMQzmfY7HnvW1taoLF6vxoY@172.21.81.135:27017";
+require('dotenv').config();                 // The course instructions taught me to do it the other way. 
+const mongoose = require('mongoose');       // I was just following instructions.
+const mongoURI = process.env.MONGO_URI;     // Now I know not to do it that way. 
 
 const connectToMongo = async (retryCount) => {
     const MAX_RETRIES = 3;

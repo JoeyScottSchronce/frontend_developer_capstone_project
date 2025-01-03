@@ -3,7 +3,7 @@ body {
     justify-items: center;
 }
 
-.container {
+.login_container {
     margin-top: 100px;
     max-width: 400px; /* Maximum width of the container */
     justify-content: center;

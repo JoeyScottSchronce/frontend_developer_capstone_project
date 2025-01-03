@@ -53,8 +53,8 @@ function Login() {
 
 
     return (
-        <div className="container">
-            <div className="container">
+        <div className="login_container">
+            <div className="login_container">
                 {/* Div for login text */}
                 <div className="login-text">
                     <h2>Login</h2>
