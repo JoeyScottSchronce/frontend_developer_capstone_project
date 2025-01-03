@@ -1,18 +1,34 @@
 import React, { useState } from 'react';
 import "./FindDoctorSearch.css";
-
-const doctorSpecialties = ["General Care", "Ear Nose and Throat", "Dermatologist"];
+import doctorSpecialties from './doctorSpecialties';
+import { useNavigate, Navigate } from 'react-router-dom';
 
 function FindDoctorSearch() {
     const [search, setSearch] = useState("");
-    const [filteredSpecialties, setFilteredSpecialties] = useState(doctorSpecialties);
+    const [filteredSpecialties, setFilteredSpecialties] = useState([]);
+    const [isFocused, setIsFocused] = useState(false);
 
     const handleSearchChange = (e) => {
         const query = e.target.value.toLowerCase();
         setSearch(query);
-        setFilteredSpecialties(doctorSpecialties.filter(specialty => 
+        setFilteredSpecialties(doctorSpecialties.filter(specialty =>
             specialty.toLowerCase().includes(query)
         ));
+    };
+
+    const navigate = useNavigate();
+    const handleDoctorSelect = (specialty) => {
+        setSearch(specialty);
+        navigate(`/instant-consultation?specialty=${specialty}`);
+        window.location.reload();
+    }
+
+    const handleFocus = () => {
+        setIsFocused(true);
+    };
+
+    const handleBlur = () => {
+        setIsFocused(false);
     };
 
     return (
@@ -22,13 +38,17 @@ function FindDoctorSearch() {
                 type='text'
                 value={search}
                 onChange={handleSearchChange}
+                onFocus={handleFocus}
+                onBlur={handleBlur}
                 placeholder="Search specialties"
             />
-            <ul>
-                {filteredSpecialties.map((specialty, index) => (
-                    <li key={index}>{specialty}</li>
-                ))}
-            </ul>
+            {isFocused && filteredSpecialties.length > 0 && (
+                <ul>
+                    {filteredSpecialties.map((specialty, index) => (
+                        <li className="specialty" key={index} onMouseDown={() => handleDoctorSelect(specialty)}>{specialty}</li>
+                    ))}
+                </ul>
+            )}
         </div>
     );
 }

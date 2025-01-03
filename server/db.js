@@ -1,6 +1,6 @@
-require('dotenv').config();                 // The course instructions taught me to do it the other way. 
-const mongoose = require('mongoose');       // I was just following instructions.
-const mongoURI = process.env.MONGO_URI;     // Now I know not to do it that way. 
+require('dotenv').config();
+const mongoose = require('mongoose');
+const mongoURI = process.env.MONGO_URI; 
 
 const connectToMongo = async (retryCount) => {
     const MAX_RETRIES = 3;
