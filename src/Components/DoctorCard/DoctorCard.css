@@ -1,6 +1,5 @@
 .container {
     box-sizing: border-box;
-    max-width: 400px;
     min-width: 300px;
     margin: 0px 10px 20px 10px;
     padding: 10px;
@@ -19,9 +18,11 @@
 
 .name {
     font-weight: 600;
+    font-size: x-large;
 }
 
 .doctor_image {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
 }
