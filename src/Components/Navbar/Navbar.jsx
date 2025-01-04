@@ -69,7 +69,6 @@ function Navbar() {
     };
 
     return (
-        <div>
             <nav>
                 <div className="nav__logo">
                     <Link to="/">
@@ -94,6 +93,9 @@ function Navbar() {
                         </li>
                         <li className="link">
                             <Link to="/reviews" onClick={hideMenu}>Reviews</Link>
+                        </li>
+                        <li className="link">
+                            <Link to="/DisplayDoctors" onClick={hideMenu}>Diplay Doctors</Link>
                         </li>
                         
                         {isLoggedIn ? (
@@ -128,7 +130,6 @@ function Navbar() {
                     </ul>
                 )}
             </nav>
-        </div>
     );
 }
 
