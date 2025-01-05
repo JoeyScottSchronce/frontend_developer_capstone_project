@@ -5,6 +5,7 @@ import LandingPage from './Components/LandingPage/LandingPage';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
+import BookingConsultation from './Components//BookingConsultation';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import DisplayDoctors from './Components/DoctorCard/DisplayDoctors';
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/InstantConsultation" element={<InstantConsultation />} />
           <Route path="/FindDoctorSearch" element={<FindDoctorSearch />} />
           <Route path="/DisplayDoctors" element={<DisplayDoctors />} />
+          <Route path="/BookingConsultation" element={<BookingConsultation />} />
         </Routes>
       </BrowserRouter>
     </>
