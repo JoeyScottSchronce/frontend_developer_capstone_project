@@ -3,17 +3,20 @@ import React, { useState } from 'react';
 function AppointmentForm({ doctorName, doctorSpeciality, onSubmit }) {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
+    const [bookingDate, setBookingDate] = useState('');
     const [timeSlot, setTimeSlot] = useState(null);
   
-    const handleSelection = (choice) => {
-      setTimeSlot(choice);
+    const handleSelection = (e) => {
+      setTimeSlot(e.target.value);
     };
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      onSubmit({ name, phoneNumber });
+      onSubmit({ name, phoneNumber, bookingDate, timeSlot });
       setName('');
       setPhoneNumber('');
+      setBookingDate('');
+      setTimeSlot('');
     };
 
     return(
@@ -39,6 +42,26 @@ function AppointmentForm({ doctorName, doctorSpeciality, onSubmit }) {
             onChange={(e) => setPhoneNumber(e.target.value)}
             required
           />
+        </div>
+        <div className="">
+          <label htmlFor="bookingDate">Date of Appointment:</label>
+          <input
+            type="date"
+            id="date"
+            value={bookingDate}
+            onChange={(e) => setBookingDate(e.target.value)}
+            required
+          />
+          </div>
+          <div className="">
+            <label htmlFor="timeSlot">Time Slot:</label>
+            <select id="timeSlot" value={timeSlot} onChange={handleSelection} required>
+                <option value="">Select an available time:</option>
+                <option value="9:00 AM">9:00 AM</option>
+                <option value="11:00 AM">11:00 AM</option>
+                <option value="2:30 PM">2:30 PM</option>
+                <option value="4:30 PM" >4:30 PM</option>
+            </select>
         </div>
         <button type="submit">Book Now</button>
       </form>

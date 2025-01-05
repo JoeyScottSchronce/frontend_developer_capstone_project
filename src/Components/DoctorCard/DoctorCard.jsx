@@ -58,7 +58,7 @@ function DoctorCard({ image, name, speciality, experience, rating }) {
                 >
 
                     {(close) => (
-                        <div className="" style={{ height: '100vh', overflow: 'scroll' }}>
+                        <div className="" style={{ height: '80vh', overflow: 'scroll' }}>
                             <div>
                                 <div><img src={image} alt="doctor" className="doctor_image"/></div>
                                 <div className="name">{name}</div>
@@ -74,6 +74,8 @@ function DoctorCard({ image, name, speciality, experience, rating }) {
                                         <div className="" key={appointment.id}>
                                             <p>Name: {appointment.name}</p>
                                             <p>Phone Number: {appointment.phoneNumber}</p>
+                                            <p>Date of Appointment: {appointment.bookingDate}</p>
+                                            <p>Time Slot: {appointment.timeSlot}</p>
                                             <button onClick={() => handleCancel(appointment.id)}>Cancel Appointment</button>
                                         </div>
                                     ))}
