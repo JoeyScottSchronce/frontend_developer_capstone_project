@@ -94,17 +94,14 @@ function Navbar() {
                         <li className="link">
                             <Link to="/reviews" onClick={hideMenu}>Reviews</Link>
                         </li>
-                        <li className="link">
-                            <Link to="/DisplayDoctors" onClick={hideMenu}>Diplay Doctors</Link>
-                        </li>
                         
                         {isLoggedIn ? (
                             <>
                                 <li className="link">
-                                    <Link to="/InstantConsultation" onClick={hideMenu}>Instant Consultation</Link>
+                                    <Link to="/instant-consultation" onClick={hideMenu}>Instant</Link>
                                 </li>
                                 <li className="link">
-                                    <Link to="/FindDoctorSearch" onClick={hideMenu}>Find a Doctor</Link>
+                                    <Link to="/booking-consultation" onClick={hideMenu}>Booking</Link>
                                 </li>
                                 <li className="Username">
                                     <span>{username}</span>

@@ -19,7 +19,7 @@ function FindDoctorSearch() {
     const navigate = useNavigate();
     const handleDoctorSelect = (specialty) => {
         setSearch(specialty);
-        navigate(`/instant-consultation?specialty=${specialty}`);
+        navigate(`/booking-consultation?specialty=${specialty}`);
         window.location.reload();
     }
 

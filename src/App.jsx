@@ -11,20 +11,21 @@ import DisplayDoctors from './Components/DoctorCard/DisplayDoctors';
 
 function App() {
   return (
-    <>
+    <div>
       <BrowserRouter>
-        <Navbar />
+        <Navbar />  {/*confirmed*/}
         <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/InstantConsultation" element={<InstantConsultation />} />
+          <Route path="/" element={<LandingPage />} />  {/*confirmed*/}
+          <Route path="/Login" element={<Login />} />   {/*confirmed*/}
+          <Route path="/SignUp" element={<SignUp />} />   {/*confirmed*/}
+          <Route path="/instant-consultation" element={<InstantConsultation />} />  {/*confirmed*/}
+          <Route path="/booking-consultation" element={<BookingConsultation />} />  {/*confirmed*/}
+          
           <Route path="/FindDoctorSearch" element={<FindDoctorSearch />} />
           <Route path="/DisplayDoctors" element={<DisplayDoctors />} />
-          <Route path="/BookingConsultation" element={<BookingConsultation />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 
