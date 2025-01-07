@@ -1,56 +1,61 @@
 import React, { useState } from 'react';
-import "./FindDoctorSearch.css";
-import doctorSpecialties from './doctorSpecialties';
+import './FindDoctorSearch.css';
 import { useNavigate, Navigate } from 'react-router-dom';
 
-function FindDoctorSearch() {
-    const [search, setSearch] = useState("");
-    const [filteredSpecialties, setFilteredSpecialties] = useState([]);
-    const [isFocused, setIsFocused] = useState(false);
 
-    const handleSearchChange = (e) => {
-        const query = e.target.value.toLowerCase();
-        setSearch(query);
-        setFilteredSpecialties(doctorSpecialties.filter(specialty =>
-            specialty.toLowerCase().includes(query)
-        ));
-    };
+const searchOptions = [
+    'Dentist',
+    'Gynecologist/obstetrician',
+    'General Physician',
+    'Dermatologist',
+    'Ear-nose-throat (ent) Specialist',
+    'Homeopath',
+    'Ayurveda'
+]
 
+const FindDoctorSearch = () => {
+    const [seeResults, setSeeResults] = useState(true);
+    const [searchDoctor, setSearchDoctor] = useState('');
+    const [specialities, setSpecialities] = useState(searchOptions);
     const navigate = useNavigate();
-    const handleDoctorSelect = (specialty) => {
-        setSearch(specialty);
-        navigate(`/booking-consultation?specialty=${specialty}`);
+
+    const handleSearch = (speciality) => {
+        setSearchDoctor(speciality);
+        setSeeResults(true);
+        navigate(`/booking-consultation?speciality=${speciality}`);
         window.location.reload();
     }
-
-    const handleFocus = () => {
-        setIsFocused(true);
-    };
-
-    const handleBlur = () => {
-        setIsFocused(false);
-    };
-
     return (
-        <div className="container">
-            <h1>Search for a Doctor</h1>
-            <input
-                type='text'
-                value={search}
-                onChange={handleSearchChange}
-                onFocus={handleFocus}
-                onBlur={handleBlur}
-                placeholder="Search specialties"
-            />
-            {isFocused && filteredSpecialties.length > 0 && (
-                <ul>
-                    {filteredSpecialties.map((specialty, index) => (
-                        <li className="specialty" key={index} onMouseDown={() => handleDoctorSelect(specialty)}>{specialty}</li>
-                    ))}
-                </ul>
-            )}
+        <div className='finddoctor'>
+            <center>
+                <h1>Search for a Doctor</h1>
+                <div className="home-search-container" 
+                style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+                    <div className="doctor-search-box">
+
+                        <input
+                            type="text"
+                            className="search-doctor-input-box"
+                            placeholder="Search for a doctor"
+                            onFocus={() => setSeeResults(false)}
+                            onBlur={() => setSeeResults(true)}
+                            value={searchDoctor}
+                            onChange={(e) => setSearchDoctor(e.target.value)}
+                        />
+                        
+                        <div className="search-doctor-input-results" hidden={seeResults}>
+                            {
+                                specialities.map(speciality =>
+                                <div className="search-doctor-result-item" key={speciality} onMouseDown={() => handleSearch(speciality)}>
+                                    <span>{speciality}</span>
+                                </div>)
+                            }
+                        </div>
+                    </div>
+                </div>
+            </center>
         </div>
-    );
+    )
 }
 
-export default FindDoctorSearch;
+export default FindDoctorSearch
