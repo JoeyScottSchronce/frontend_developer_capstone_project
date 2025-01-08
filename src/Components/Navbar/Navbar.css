@@ -48,7 +48,7 @@ nav {
 }
 
 /* Media queries for mobile responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 919px) {
     .nav__logo {
         margin-right: auto;
         margin-left: auto;

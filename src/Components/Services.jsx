@@ -6,24 +6,28 @@ function Services() {
 
     return(
         <div className="get_started_container">
-            <div className="instant">
-                <Link to="/instant-consultation">
-                    Instant Consultation
+            <div className="image-container">
+                <Link to="/instant-consultation" className="link_box">
+                    <img src={`${process.env.PUBLIC_URL}/service_image_1.jpg`} className="service_image" alt="instant consultation" />
+                    <h4>Instant Consultation</h4>
                 </Link>
             </div>
-            <div className="booking">
-                <Link to="/booking-consultation">
-                    Book an Appointment
+            <div className="image-container">
+                <Link to="/booking-consultation" className="link_box">
+                <img src={`${process.env.PUBLIC_URL}/service_image_2.jpg`} className="service_image" alt="instant consultation" />
+                    <h4>Booking Consultation</h4>
                 </Link>
             </div>
-                    <div className="self_checkup">
-                <Link to="/self-checkup">
-                    Self Checkup
+            <div className="image-container">
+                <Link to="/self-checkup" className="link_box">
+                <img src={`${process.env.PUBLIC_URL}/service_image_3.jpg`} className="service_image" alt="instant consultation" />
+                    <h4>Self Checkup</h4>
                 </Link>
             </div>
-            <div className="tips_and_guildance">
-                <Link to="/tips_and_guildance">
-                    Health Tips and Guildance
+            <div className="image-container">
+                <Link to="/tips_and_guildance" className="link_box">
+                <img src={`${process.env.PUBLIC_URL}/service_image_4.jpg`} className="service_image" alt="instant consultation" />
+                    <h4>Health Tips and Guildance</h4>
                 </Link>
             </div>
         </div>
