@@ -97,12 +97,6 @@ function Navbar() {
                         
                         {isLoggedIn ? (
                             <>
-                                <li className="link">
-                                    <Link to="/instant-consultation" onClick={hideMenu}>Instant</Link>
-                                </li>
-                                <li className="link">
-                                    <Link to="/booking-consultation" onClick={hideMenu}>Booking</Link>
-                                </li>
                                 <li className="Username">
                                     <span>{username}</span>
                                 </li>

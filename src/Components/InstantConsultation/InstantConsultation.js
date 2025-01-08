@@ -46,7 +46,11 @@ const InstantConsultation = () => {
 
     useEffect(() => {
         getDoctorsDetails();
-    }, [searchParams]);
+        const authtoken = sessionStorage.getItem("auth-token");
+        if (!authtoken) {
+            navigate("/login");
+        }
+    }, [searchParams, navigate]);
 
     return (
         <center>

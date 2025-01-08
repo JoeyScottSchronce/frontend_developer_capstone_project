@@ -1,0 +1,7 @@
+.get_started_container {
+    margin-top: 150px;
+}
+
+.get_started_container :hover{
+    color: blue;
+}
