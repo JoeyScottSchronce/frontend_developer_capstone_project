@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import DoctorCard from './DoctorCard/DoctorCard';
 import { DoctorFiles } from './DoctorCard/DisplayDoctors'
 import FindDoctorSearch from './FindDoctorSearch/FindDoctorSearch';
+import './BookingConsultation.css'
 
 function BookingConsultation() {
     const [searchParams] = useSearchParams();
@@ -19,8 +20,9 @@ function BookingConsultation() {
                 setIsSearched(true);
             } else {
                 setFilteredDoctors([]);
-                setIsSearched(false); }
-                setDoctors(data);
+                setIsSearched(false);
+            }
+            setDoctors(data);
         };
 
     const handleSearch = (searchText) => {
@@ -39,26 +41,26 @@ function BookingConsultation() {
                 
             setFilteredDoctors(filtered);
             setIsSearched(true);
-            window.location.reload()
         }
     };
 
     const navigate = useNavigate();
+
     useEffect(() => {
         getDoctorsDetails();
-        // const authtoken = sessionStorage.getItem("auth-token");
-        // if (!authtoken) {
-        //     navigate("/login");
-        // }
-    }, [searchParams])
+        const authtoken = sessionStorage.getItem("auth-token");
+        if (!authtoken) {
+            navigate("/login");
+        }
+    }, [searchParams, navigate]);
 
     return (
-        <center>
+        <div className=''>
             <div  className="searchpage-container">
             <FindDoctorSearch onSearch={handleSearch} />
             <div className="search-results-container">
             {isSearched ? (
-                <center>
+                <div className=''>
                     <h2>{filteredDoctors.length} doctors are available {searchParams.get('location')}</h2>
                     <h3>Book appointments with minimum wait-time & verified doctor details</h3>
                     {filteredDoctors.length > 0 ? (
@@ -66,13 +68,13 @@ function BookingConsultation() {
                     ) : (
                     <p>No doctors found.</p>
                     )}
-                </center>
+                </div>
                 ) : (
                 ''
                 )}
             </div>
         </div>
-        </center>
+        </div>
     )
 };
 

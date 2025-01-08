@@ -23,11 +23,11 @@ const FindDoctorSearch = () => {
         setSearchDoctor(speciality);
         setSeeResults(true);
         navigate(`/booking-consultation?speciality=${speciality}`);
-        window.location.reload();
     }
+
     return (
         <div className='finddoctor'>
-            <center>
+            <div className='search_container'>
                 <h1>Search for a Doctor</h1>
                 <div className="home-search-container" 
                 style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
@@ -53,7 +53,7 @@ const FindDoctorSearch = () => {
                         </div>
                     </div>
                 </div>
-            </center>
+            </div>
         </div>
     )
 }

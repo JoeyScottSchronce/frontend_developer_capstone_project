@@ -6,22 +6,19 @@ import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import BookingConsultation from './Components//BookingConsultation';
-import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import DisplayDoctors from './Components/DoctorCard/DisplayDoctors';
 
 function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />  {/*confirmed*/}
+        <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />  {/*confirmed*/}
-          <Route path="/Login" element={<Login />} />   {/*confirmed*/}
-          <Route path="/SignUp" element={<SignUp />} />   {/*confirmed*/}
-          <Route path="/instant-consultation" element={<InstantConsultation />} />  {/*confirmed*/}
-          <Route path="/booking-consultation" element={<BookingConsultation />} />  {/*confirmed*/}
-          
-          <Route path="/FindDoctorSearch" element={<FindDoctorSearch />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/Login" element={<Login />} />
+          <Route path="/SignUp" element={<SignUp />} />
+          <Route path="/instant-consultation" element={<InstantConsultation />} />
+          <Route path="/booking-consultation" element={<BookingConsultation />} />
           <Route path="/DisplayDoctors" element={<DisplayDoctors />} />
         </Routes>
       </BrowserRouter>
