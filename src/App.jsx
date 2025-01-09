@@ -12,6 +12,7 @@ import BookingConsultation from './Components//BookingConsultation';
 // Delete these before pushing to prod
 import DisplayDoctors from './Components/DoctorCard/DisplayDoctors';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
+import ReviewForm from './Components/ReviewForm/ReviewForm';
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
           {/* Delete this before pushing to prod */}
           <Route path="/FindDoctorSearch" element={<FindDoctorSearch />} />
           <Route path="/DisplayDoctors" element={<DisplayDoctors />} />
+          <Route path='/ReviewForm' element={<ReviewForm />} />
 
         </Routes>
       </BrowserRouter>
