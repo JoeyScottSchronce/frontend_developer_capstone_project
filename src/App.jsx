@@ -9,7 +9,9 @@ import Services from './Components/Services';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import BookingConsultation from './Components//BookingConsultation';
 
-import DisplayDoctors from './Components/DoctorCard/DisplayDoctors'; // Delete this before pushing to prod
+// Delete these before pushing to prod
+import DisplayDoctors from './Components/DoctorCard/DisplayDoctors';
+import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 
 function App() {
   return (
@@ -21,14 +23,15 @@ function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
-
-          <Route path="/DisplayDoctors" element={<DisplayDoctors />} /> {/* Delete this before pushing to prod */}
-
           <Route path="/Services" element={<Services />} />
           <Route path="/instant-consultation" element={<InstantConsultation />} />
           <Route path="/booking-consultation" element={<BookingConsultation />} />
         {/*  <Route path="/tips_and_guildance" element={<HealthTipsGuildance />} />  
           <Route path="/self_checkup" element={<SelfCheckUp />} />  */}
+
+          {/* Delete this before pushing to prod */}
+          <Route path="/FindDoctorSearch" element={<FindDoctorSearch />} />
+          <Route path="/DisplayDoctors" element={<DisplayDoctors />} />
 
         </Routes>
       </BrowserRouter>
