@@ -33,27 +33,30 @@ function Login() {
         // Parse the response JSON
         const json = await res.json();
         if (json.authtoken) {
-        // If authentication token is received, store it in session storage
-        sessionStorage.setItem('auth-token', json.authtoken);
-        sessionStorage.setItem('email', email);
-        // Redirect to home page and reload the window
-        navigate('/');
-        window.location.reload();
-        } else {
-        // Handle errors if authentication fails
-        if (json.errors) {
-            for (const error of json.errors) {
-            alert(error.msg);
+            // If authentication token is received, store it in session storage
+            sessionStorage.setItem('auth-token', json.authtoken);
+            sessionStorage.setItem('email', email);
+            // Redirect to home page and reload the window
+            navigate('/');
+            window.location.reload();
+            } else {
+                // Handle errors if authentication fails
+                if (json.errors) {
+                    for (const error of json.errors) {
+                        alert(error.msg);
+                    }
+                } else {
+                    alert(json.error);
+                }
             }
-        } else {
-            alert(json.error);
-        }
-    }
-};
+        };
 
+    const resetForm = () => {
+        setEmail("");
+        setPassword("");
+    };
 
     return (
-        <div className="login_container">
             <div className="login_container">
                 {/* Div for login text */}
                 <div className="login-text">
@@ -95,14 +98,13 @@ function Login() {
                         {/* Button group for login and reset buttons */}
                         <div className="btn-group">
                             <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">Login</button> 
-                            <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">Reset</button>
+                            <button type="reset" onClick={resetForm} className="btn btn-danger mb-2 waves-effect waves-light">Reset</button>
                         </div><br />
                         {/* Additional login text for 'Forgot Password' option */}
                         <div className="login-text">Forgot Password?</div>
                     </form>
                 </div>
             </div>
-        </div>
     )
 };
 
