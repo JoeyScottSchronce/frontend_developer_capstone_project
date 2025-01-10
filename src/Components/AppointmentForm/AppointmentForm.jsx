@@ -4,7 +4,7 @@ function AppointmentForm({ doctorName, doctorSpecialty, onSubmit }) {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [bookingDate, setBookingDate] = useState('');
-    const [timeSlot, setTimeSlot] = useState(null);
+    const [timeSlot, setTimeSlot] = useState(undefined);
   
     const handleSelection = (e) => {
       setTimeSlot(e.target.value);
@@ -12,7 +12,10 @@ function AppointmentForm({ doctorName, doctorSpecialty, onSubmit }) {
 
     const handleSubmit = (e) => {
       e.preventDefault();
-      onSubmit({ name, phoneNumber, bookingDate, timeSlot });
+
+      const appointmentData = { name, phoneNumber, bookingDate, timeSlot };
+      sessionStorage.setItem('appointmentData', JSON.stringify(appointmentData));
+      onSubmit(appointmentData);
       setName('');
       setPhoneNumber('');
       setBookingDate('');
