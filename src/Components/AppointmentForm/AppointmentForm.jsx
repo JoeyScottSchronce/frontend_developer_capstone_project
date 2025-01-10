@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function AppointmentForm({ doctorName, doctorSpeciality, onSubmit }) {
+function AppointmentForm({ doctorName, doctorSpecialty, onSubmit }) {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [bookingDate, setBookingDate] = useState('');

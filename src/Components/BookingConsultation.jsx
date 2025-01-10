@@ -13,9 +13,9 @@ function BookingConsultation() {
     
     const getDoctorsDetails = () => {
         const data = DoctorFiles;
-        if (searchParams.get('speciality')) {
+        if (searchParams.get('specialty')) {
             const filtered = data.filter(doctor =>
-                doctor.speciality.toLowerCase() === searchParams.get('speciality').toLowerCase());
+                doctor.specialty.toLowerCase() === searchParams.get('specialty').toLowerCase());
                 setFilteredDoctors(filtered);
                 setIsSearched(true);
             } else {
@@ -35,7 +35,7 @@ function BookingConsultation() {
             const filtered = doctors.filter(
                 (doctor) =>
                 // 
-                doctor.speciality.toLowerCase().includes(searchText.toLowerCase())
+                doctor.specialty.toLowerCase().includes(searchText.toLowerCase())
                 
             );
                 

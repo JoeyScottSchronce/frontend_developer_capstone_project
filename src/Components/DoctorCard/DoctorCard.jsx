@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import AppointmentForm from '../AppointmentForm/AppointmentForm'
 
 
-function DoctorCard({ image, name, speciality, experience, rating }) {
+function DoctorCard({ image, name, specialty, experience, rating }) {
     const [showForm, setShowForm] = useState(false);
     const [appointments, setAppointments] = useState([]);
 
@@ -34,7 +34,7 @@ function DoctorCard({ image, name, speciality, experience, rating }) {
             <div>
                 <div><img src={image} alt="doctor" className="doctor_image"/></div>
                 <div className="name">{name}</div>
-                <div>{speciality}</div>
+                <div>{specialty}</div>
                 <div>{experience} years of experience</div>
                 <div>Ratings: {rating}</div>
             </div>    
@@ -62,7 +62,7 @@ function DoctorCard({ image, name, speciality, experience, rating }) {
                             <div>
                                 <div><img src={image} alt="doctor" className="doctor_image"/></div>
                                 <div className="name">{name}</div>
-                                <div>{speciality}</div>
+                                <div>{specialty}</div>
                                 <div>{experience} years of experience</div>
                                 <div>Ratings: {rating}</div>
                             </div>
@@ -81,7 +81,7 @@ function DoctorCard({ image, name, speciality, experience, rating }) {
                                     ))}
                                 </>
                             ) : (
-                                <AppointmentForm doctorName={name} doctorSpeciality={speciality} onSubmit={handleSubmit} />
+                                <AppointmentForm doctorName={name} doctorspecialty={specialty} onSubmit={handleSubmit} />
                             )}
                         </div>
                     )}

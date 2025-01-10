@@ -19,10 +19,10 @@ const FindDoctorSearch = () => {
     const [specialities, setSpecialities] = useState(searchOptions);
     const navigate = useNavigate();
 
-    const handleSearch = (speciality) => {
-        setSearchDoctor(speciality);
+    const handleSearch = (specialty) => {
+        setSearchDoctor(specialty);
         setSeeResults(true);
-        navigate(`/booking-consultation?speciality=${speciality}`);
+        navigate(`/booking-consultation?specialty=${specialty}`);
     }
 
     return (
@@ -45,9 +45,9 @@ const FindDoctorSearch = () => {
                         
                         <div className="search-doctor-input-results" hidden={seeResults}>
                             {
-                                specialities.map(speciality =>
-                                <div className="search-doctor-result-item" key={speciality} onMouseDown={() => handleSearch(speciality)}>
-                                    <span>{speciality}</span>
+                                specialities.map(specialty =>
+                                <div className="search-doctor-result-item" key={specialty} onMouseDown={() => handleSearch(specialty)}>
+                                    <span>{specialty}</span>
                                 </div>)
                             }
                         </div>
