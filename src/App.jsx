@@ -13,6 +13,8 @@ import BookingConsultation from './Components//BookingConsultation';
 import DisplayDoctors from './Components/DoctorCard/DisplayDoctors';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import ReviewForm from './Components/ReviewForm/ReviewForm';
+import Notification from './Components/Notification/Notification';
+
 
 function App() {
   return (
@@ -34,6 +36,8 @@ function App() {
           <Route path="/FindDoctorSearch" element={<FindDoctorSearch />} />
           <Route path="/DisplayDoctors" element={<DisplayDoctors />} />
           <Route path='/ReviewForm' element={<ReviewForm />} />
+          <Route path='/Notification' element={<Notification />} />
+
 
         </Routes>
       </BrowserRouter>
