@@ -38,4 +38,9 @@ table {
     width: 300px;
     text-align: left;
 }
+
+.submit-message p {
+    margin-bottom: 20px;
+    text-align: center;
+}
   

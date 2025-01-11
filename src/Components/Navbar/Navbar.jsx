@@ -92,7 +92,7 @@ function Navbar() {
                             <Link to="/healthblog" onClick={hideMenu}>Health Blog</Link>
                         </li>
                         <li className="link">
-                            <Link to="/reviews" onClick={hideMenu}>Reviews</Link>
+                            <Link to="/ReviewForm" onClick={hideMenu}>Reviews</Link>
                         </li>
                         
                         {isLoggedIn ? (

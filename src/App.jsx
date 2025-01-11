@@ -8,11 +8,11 @@ import Services from './Components/Services';
 import InstantConsultation from './Components/InstantConsultation/InstantConsultation';
 import BookingConsultation from './Components//BookingConsultation';
 import Notification from './Components/Notification/Notification';
+import ReviewForm from './Components/ReviewForm/ReviewForm';
 
 // Delete these before pushing to prod
 import DisplayDoctors from './Components/DoctorCard/DisplayDoctors';
 import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
-import ReviewForm from './Components/ReviewForm/ReviewForm';
 
 function App() {
   return (
@@ -27,15 +27,15 @@ function App() {
           <Route path="/Services" element={<Services />} />
           <Route path="/instant-consultation" element={<InstantConsultation />} />
           <Route path="/booking-consultation" element={<BookingConsultation />} />
+          <Route path='/Notification' element={<Notification />} />
+          <Route path='/ReviewForm' element={<ReviewForm />} />
         {/*  <Route path="/tips_and_guildance" element={<HealthTipsGuildance />} />  
           <Route path="/self_checkup" element={<SelfCheckUp />} />  */}
+
 
           {/* Delete this before pushing to prod */}
           <Route path="/FindDoctorSearch" element={<FindDoctorSearch />} />
           <Route path="/DisplayDoctors" element={<DisplayDoctors />} />
-          <Route path='/ReviewForm' element={<ReviewForm />} />
-          <Route path='/Notification' element={<Notification />} />
-
 
         </Routes>
       </BrowserRouter>
