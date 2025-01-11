@@ -1,3 +1,13 @@
 .notification-container {
-    margin-top: 300px;
+    display: flex;
+    background-color: rgb(135, 199, 255);
+    margin: 150px 20px 20px 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid rgb(86, 86, 86);
+    align-self: flex-end;
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px;
+    z-index: 1000;   
 }

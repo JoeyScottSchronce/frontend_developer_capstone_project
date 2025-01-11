@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import AppointmentForm from '../AppointmentForm/AppointmentForm'
 
 
-function DoctorCard({ image, name, specialty, experience, rating }) {
+function DoctorCard({ image, name, specialty, experience, rating, setNotify}) {
     const [showForm, setShowForm] = useState(false);
     const [appointments, setAppointments] = useState([]);
 
@@ -16,6 +16,7 @@ function DoctorCard({ image, name, specialty, experience, rating }) {
     const handleCancel = (appointmentId) => {
         const updatedAppointments = appointments.filter((appointment) => appointment.id !== appointmentId);
         setAppointments(updatedAppointments);
+        setNotify(false);
     };
 
     const handleSubmit = (appointmentData) => {
@@ -27,6 +28,7 @@ function DoctorCard({ image, name, specialty, experience, rating }) {
         const updatedAppointments = [...appointments, newAppointment];
         setAppointments(updatedAppointments);
         setShowForm(false);
+        setNotify(true);
     };
 
     return (
@@ -76,7 +78,9 @@ function DoctorCard({ image, name, specialty, experience, rating }) {
                                             <p>Phone Number: {appointment.phoneNumber}</p>
                                             <p>Date of Appointment: {appointment.bookingDate}</p>
                                             <p>Time Slot: {appointment.timeSlot}</p>
-                                            <button onClick={() => handleCancel(appointment.id)}>Cancel Appointment</button>
+                                            <button onClick={() => { handleCancel(appointment.id)}}>
+                                                Cancel Appointment
+                                            </button>
                                         </div>
                                     ))}
                                 </>

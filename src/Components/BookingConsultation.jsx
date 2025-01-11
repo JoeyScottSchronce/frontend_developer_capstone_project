@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 import DoctorCard from './DoctorCard/DoctorCard';
 import { DoctorFiles } from './DoctorCard/DisplayDoctors'
 import FindDoctorSearch from './FindDoctorSearch/FindDoctorSearch';
+import Notification from './Notification/Notification';
 import './BookingConsultation.css'
 
 function BookingConsultation() {
@@ -10,6 +11,7 @@ function BookingConsultation() {
     const [doctors, setDoctors] = useState([]);
     const [filteredDoctors, setFilteredDoctors] = useState([]);
     const [isSearched, setIsSearched] = useState(false);
+    const [notify, setNotify] = useState(false);
     
     const getDoctorsDetails = () => {
         const data = DoctorFiles;
@@ -34,7 +36,6 @@ function BookingConsultation() {
                 
             const filtered = doctors.filter(
                 (doctor) =>
-                // 
                 doctor.specialty.toLowerCase().includes(searchText.toLowerCase())
                 
             );
@@ -57,23 +58,25 @@ function BookingConsultation() {
     return (
         <div className=''>
             <div  className="searchpage-container">
-            <FindDoctorSearch onSearch={handleSearch} />
-            <div className="search-results-container">
-            {isSearched ? (
-                <div className=''>
-                    <h2>{filteredDoctors.length} doctors are available {searchParams.get('location')}</h2>
-                    <h3>Book appointments with minimum wait-time & verified doctor details</h3>
-                    {filteredDoctors.length > 0 ? (
-                    filteredDoctors.map(doctor => <DoctorCard className="doctorcard" {...doctor} key={doctor.name} />)
+                <FindDoctorSearch onSearch={handleSearch} />
+                <div className="search-results-container">
+                    {isSearched ? (
+                    <div className=''>
+                        <h2>{filteredDoctors.length} doctors are available {searchParams.get('location')}</h2>
+                        <h3>Book appointments with minimum wait-time & verified doctor details</h3>
+                        {filteredDoctors.length > 0 ? (
+                            filteredDoctors.map(doctor =>
+                            <DoctorCard className="doctorcard" {...doctor} key={doctor.name} setNotify={setNotify}/>)
+                        ) : (
+                        <p>No doctors found.</p>
+                        )}
+                    </div>
                     ) : (
-                    <p>No doctors found.</p>
+                        ''
                     )}
                 </div>
-                ) : (
-                ''
-                )}
             </div>
-        </div>
+            <Notification setNotify={setNotify}></Notification>
         </div>
     )
 };
