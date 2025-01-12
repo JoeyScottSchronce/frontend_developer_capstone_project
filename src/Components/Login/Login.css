@@ -90,3 +90,23 @@ body {
 .login-btn-danger:hover {
     background-color: #a71d2a;
 }
+
+.password-container {
+    position: relative; /* Ensure button stays inside the input field */
+    display: flex; /* Make the container flex */
+}
+
+.password-toggle-text {
+    position: absolute;
+    right: 10px; /* Position to the left inside the input */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 14px;
+    padding-right: 10px; /* Avoid overlap with input text */
+    color: #007bff;
+}
+
+.password-toggle-text:hover {
+    color: #0056b3;
+}
