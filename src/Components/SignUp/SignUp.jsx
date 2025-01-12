@@ -57,7 +57,7 @@ function SignUp() {
             if (response.status === 403) {
                 setShowerr((prevErrors) => ({
                     ...prevErrors,
-                    email: `Email already registered`
+                    email: "Email already registered"
                 }));
                 return;
             }
@@ -99,69 +99,77 @@ function SignUp() {
     };
 
     return (
-        <div className="container">
+        <div className="sign-up-container">
             <div>
-                <div className="signup-text">
+                <div className="sign-up-signup-text">
                     <h1>Sign Up</h1>
                 </div>
-                <div className="signup-text1"> Already a member? <span><Link to="/Login" style={{ color: '#2190FF' }}> Login</Link></span></div>
-                <div className="signup-page">
+                <div className="sign-up-signup-text1"> Already a member? <span><Link to="/Login" style={{ color: '#2190FF' }}> Login</Link></span></div>
+                <div className="sign-up-signup-page">
                     <form method="POST" onSubmit={register}>
 
-                        <div className="form-group">
+                        <div className='sign-up-form-group'>
+                            <label htmlFor="role">Role</label>
+                            <select id="role" className="sign-up-form-control">
+                                <option value="patient">Patient</option>
+                                <option value="doctor">Doctor</option>
+                            </select>
+                        </div>
+
+                        <div className="sign-up-form-group">
                             <label htmlFor="name">Name</label>
                             <input value={name} onChange={(e) => setName(e.target.value)}
                                 type="text"
                                 name="name"
                                 id="name"
-                                className="form-control"
+                                className="sign-up-form-control"
                                 placeholder="Enter your name"
                                 aria-describedby="helpId"
                             />
-                            {showerr.name && <div className="err" style={{ color: 'red' }}>{showerr.name}</div>}
+                            {showerr.name && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.name}</div>}
                         </div>
 
-                        <div className="form-group">
+                        <div className="sign-up-form-group">
                             <label htmlFor="phone">Phone</label>
                             <input value={phone} onChange={(e) => setPhone(e.target.value)}
                                 type="tel"
                                 name="phone"
                                 id="phone"
-                                required className="form-control"
+                                required className="sign-up-form-control"
                                 placeholder="Enter your phone number"
                                 aria-describedby="helpId"
                             />
-                            {showerr.phone && <div className="err" style={{ color: 'red' }}>{showerr.phone}</div>}
+                            {showerr.phone && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.phone}</div>}
                         </div>
 
-                        <div className="form-group">
+                        <div className="sign-up-form-group">
                             <label htmlFor="email">Email</label>
                             <input value={email} onChange={(e) => setEmail(e.target.value)}
                                 type="email"
                                 name="email"
                                 id="email"
-                                className="form-control"
+                                className="sign-up-form-control"
                                 placeholder="Enter your email"
                                 aria-describedby="helpId"
                             />
-                            {showerr.email && <div className="err" style={{ color: 'red' }}>{showerr.email}</div>}
+                            {showerr.email && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.email}</div>}
                         </div>
 
-                        <div className="form-group">
+                        <div className="sign-up-form-group">
                             <label htmlFor="password">Password</label>
                             <input value={password} onChange={(e) => setPassword(e.target.value)}
                                 name="password"
                                 id="password"
-                                required className="form-control"
+                                required className="sign-up-form-control"
                                 placeholder="Enter your password"
                                 aria-describedby="helpId"
                             />
-                            {showerr.password && <div className="err" style={{ color: 'red' }}>{showerr.password}</div>}
+                            {showerr.password && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.password}</div>}
                         </div>
 
-                        <div className="btn-group">
-                            <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button>
-                            <button type="reset" onClick={resetForm} className="btn btn-danger mb-2 waves-effect waves-light">Reset</button>
+                        <div className="sign-up-btn-group">
+                            <button type="submit" className="sign-up-btn sign-up-btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button>
+                            <button type="reset" onClick={resetForm} className="sign-up-btn sign-up-btn-danger mb-2 waves-effect waves-light">Reset</button>
                         </div>
                     </form>
                 </div>
