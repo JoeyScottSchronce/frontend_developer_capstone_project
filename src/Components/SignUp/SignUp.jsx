@@ -5,6 +5,7 @@ import "./SignUp.css";
 
 function SignUp() {
     // State variables using useState hook
+    const [role, setRole] = useState('');
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
@@ -15,10 +16,16 @@ function SignUp() {
 
     // Function to handle form submission
     const register = async (e) => {
-        e.preventDefault(); // Prevent default form submission
-
-        // Reset error messages
+        e.preventDefault();
         setShowerr({});
+        
+        // Check if role is selected
+        if (!role) {
+            setShowerr((prevErrors) => ({
+                ...prevErrors, role: "Please select a role"
+            }));
+            return;
+        }
 
         // Check if the password is at least 8 characters long
         if (password.length < 8) {
@@ -46,6 +53,7 @@ function SignUp() {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
+                    role: role,
                     name: name,
                     email: email,
                     password: password,
@@ -67,6 +75,7 @@ function SignUp() {
             if (json.authtoken) {
                 // Store user data in session storage
                 sessionStorage.setItem("auth-token", json.authtoken);
+                sessionStorage.setItem("role", role);
                 sessionStorage.setItem("name", name);
                 sessionStorage.setItem("phone", phone);
                 sessionStorage.setItem("email", email);
@@ -92,6 +101,7 @@ function SignUp() {
     };
 
     const resetForm = () => {
+        setRole("");
         setName("");
         setEmail("");
         setPhone("");
@@ -110,11 +120,19 @@ function SignUp() {
 
                         <div className='sign-up-form-group'>
                             <label htmlFor="role">Role</label>
-                            <select id="role" className="sign-up-form-control">
+                            <select 
+                                id="role" 
+                                className="sign-up-form-control" 
+                                value={role}
+                                onChange={(e) => setRole(e.target.value)} 
+                                required>
+                                <option value="" disabled hidden>Select a Role</option>
                                 <option value="patient">Patient</option>
                                 <option value="doctor">Doctor</option>
                             </select>
+                            {showerr.role && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.role}</div>}
                         </div>
+
 
                         <div className="sign-up-form-group">
                             <label htmlFor="name">Name</label>
