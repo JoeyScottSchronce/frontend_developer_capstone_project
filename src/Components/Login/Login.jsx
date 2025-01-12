@@ -1,7 +1,7 @@
+// Import React and hooks
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { API_URL } from '../../config';
-
 import "./Login.css";
 
 function Login() {
@@ -63,45 +63,46 @@ function Login() {
                     <h2>Login</h2>
                 </div>
                 {/* Additional login text with a link to Sign Up page */}
-                <div className="login-text"> Are you a new member? <span><Link to="/SignUp" style={{ color: '#2190FF' }}> Sign Up Here</Link></span>
+                <div className="login-text1"> Are you a new member? <span><Link to="/SignUp" style={{ color: '#2190FF' }}> Sign Up Here</Link></span>
                 </div><br />
 
                 {/* Div for login form */}
                 <div className="login-form">
                     <form onSubmit={login}>
                         {/* Form group for email input */}
-                        <div className="form-group">
+                        <div className="login-form-group">
                             <label htmlFor="email">Email</label>
                             <input value={email} onChange={(e) => setEmail(e.target.value)}
                             type="email"
                             name="email"
                             id="email"
-                            className="form-control"
+                            className="login-form-control"
                             placeholder="Enter your email"
                             aria-describedby="helpId"
                             />
                         </div>
 
                         {/* Form group for password input */}
-                        <div className="form-group">
+                        <div className="login-form-group">
                             <label htmlFor="password">Password</label>
                             <input value={password} onChange={(e) => setPassword(e.target.value)}
                             type="password"
                             name="password"
                             id="password"
-                            className="form-control"
+                            className="login-form-control"
                             placeholder="Enter your password"
                             aria-describedby="helpId"
                             />
                         </div>
 
                         {/* Button group for login and reset buttons */}
-                        <div className="btn-group">
-                            <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">Login</button> 
-                            <button type="reset" onClick={resetForm} className="btn btn-danger mb-2 waves-effect waves-light">Reset</button>
-                        </div><br />
+                        <div className="login-btn-group">
+                            <button type="submit" className="login-btn login-btn-primary mb-2 mr-1 waves-effect waves-light">Login</button>
+                            <button type="reset" onClick={resetForm} className="login-btn login-btn-danger mb-2 waves-effect waves-light">Reset</button>
+                        </div>
+                        <br />
                         {/* Additional login text for 'Forgot Password' option */}
-                        <div className="login-text">Forgot Password?</div>
+                        <div className="forgot-password-text">Forgot Password?</div>
                     </form>
                 </div>
             </div>

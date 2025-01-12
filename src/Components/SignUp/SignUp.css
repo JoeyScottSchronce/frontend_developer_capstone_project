@@ -85,25 +85,44 @@
     min-width: 250px;
 }
 
-/* Styles for buttons in the signup form */
+/* Styles for buttons */
 .sign-up-btn {
-    margin: 0.3rem; /* Reduce margin */
-    padding: 0.8em; /* Reduce padding */
-    font-size: 0.9rem; /* Reduce font size */
-    max-width: 90px; /* Reduce max width */
-    border: none; /* Remove button borders */
-    border-radius: 4px; /* Add border radius for rounded corners */
-    cursor: pointer; /* Change cursor to pointer on hover */
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    margin: auto 10px;
+    margin-bottom: 10px;
+    padding: 10px 20px; /* Match padding */
+    font-size: 16px; /* Match font size */
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100px;
 }
 
-/* Styles for primary button in the signup form */
+.sign-up-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Primary Button */
 .sign-up-btn-primary {
-    background-color: #007bff; /* Set background color for primary button */
-    color: #fff; /* Set text color for primary button */
+    background-color: #007bff; /* Same background color */
+    color: #fff; /* Same text color */
 }
 
-/* Styles for danger button in the signup form */
+.sign-up-btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* Danger Button */
 .sign-up-btn-danger {
-    background-color: #dc3545; /* Set background color for danger button */
-    color: #fff; /* Set text color for danger button */
+    background-color: #dc3545; /* Same background color */
+    color: #fff; /* Same text color */
+}
+
+.sign-up-btn-danger:hover {
+    background-color: #a71d2a;
 }
