@@ -26,16 +26,16 @@ const FindDoctorSearch = () => {
     }
 
     return (
-        <div className='finddoctor'>
-            <div className='search_container'>
+        <div className='BC-finddoctor'>
+            <div className='BC-search_container'>
                 <h1>Search for a Doctor</h1>
-                <div className="home-search-container" 
+                <div className="BC-home-search-container" 
                 style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-                    <div className="doctor-search-box">
+                    <div className="BC-doctor-search-box">
 
                         <input
                             type="text"
-                            className="search-doctor-input-box"
+                            className="BC-search-doctor-input-box"
                             placeholder="Search for a doctor"
                             onFocus={() => setSeeResults(false)}
                             onBlur={() => setSeeResults(true)}
@@ -43,10 +43,10 @@ const FindDoctorSearch = () => {
                             onChange={(e) => setSearchDoctor(e.target.value)}
                         />
                         
-                        <div className="search-doctor-input-results" hidden={seeResults}>
+                        <div className="BC-search-doctor-input-results" hidden={seeResults}>
                             {
                                 specialities.map(specialty =>
-                                <div className="search-doctor-result-item" key={specialty} onMouseDown={() => handleSearch(specialty)}>
+                                <div className="BC-search-doctor-result-item" key={specialty} onMouseDown={() => handleSearch(specialty)}>
                                     <span>{specialty}</span>
                                 </div>)
                             }
