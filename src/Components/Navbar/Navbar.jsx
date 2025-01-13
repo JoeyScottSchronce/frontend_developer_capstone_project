@@ -1,4 +1,5 @@
 import React, { useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 
@@ -7,6 +8,7 @@ function Navbar() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
+    const navigate = useNavigate();
 
     const handleLogout = () => {
         sessionStorage.removeItem("auth-token");
@@ -68,6 +70,10 @@ function Navbar() {
         }
     };
 
+    const handleNavigate = (path) => {
+        navigate(`/${path}`);
+    };
+
     return (
             <nav>
                 <div className="nav__logo">
@@ -97,9 +103,11 @@ function Navbar() {
                         
                         {isLoggedIn ? (
                             <>
-                                <li className="Username">
-                                    <span>{username}</span>
-                                </li>
+                                <select className="Username" onChange={(e) => handleNavigate(e.target.value)} defaultValue="">
+                                    <option className='Username' value="">{username}</option>
+                                    <option className='profile-options' value="Profile">Profile</option>
+                                    <option className='profile-options' value="Reports">Reports</option>
+                                </select>
                                 <li className="link">
                                     <button className="btn1" onClick={handleLogout}>Logout</button>
                                 </li>
