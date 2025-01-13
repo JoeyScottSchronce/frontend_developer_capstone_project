@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
 import LandingPage from './Components/LandingPage/LandingPage';
 import ProfileCard from './Components/Profile/ProfileCard';
+import Reports from './Components/ReportsLayout/ReportsLayout';
 import Login from './Components/Login/Login';
 import SignUp from './Components/SignUp/SignUp';
 import Services from './Components/Services';
@@ -25,6 +26,7 @@ function App() {
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Profile" element={<ProfileCard />} />
+          <Route path="/Reports" element={<Reports />} />
           <Route path="/Services" element={<Services />} />
           <Route path="/instant-consultation" element={<InstantConsultation />} />
           <Route path="/booking-consultation" element={<BookingConsultation />} />
