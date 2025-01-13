@@ -74,7 +74,7 @@ function BookingConsultation() {
                         </div>
                     </div>
                     ) : (
-                        ''
+                        <><div className='search-bar-image-container'><img className='search-bar-image' src="https://cdn.pixabay.com/photo/2021/11/09/05/44/doctor-6780685_1280.png" alt="doctors" /></div></>
                     )}
                 </div>
             </div>
