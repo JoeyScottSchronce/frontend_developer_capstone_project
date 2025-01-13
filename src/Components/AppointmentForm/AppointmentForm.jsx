@@ -4,8 +4,8 @@ function AppointmentForm({ doctorName, doctorSpecialty, onSubmit }) {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [bookingDate, setBookingDate] = useState('');
-    const [timeSlot, setTimeSlot] = useState(undefined);
-  
+    const [timeSlot, setTimeSlot] = useState('');
+
     const handleSelection = (e) => {
       setTimeSlot(e.target.value);
     };
@@ -23,8 +23,8 @@ function AppointmentForm({ doctorName, doctorSpecialty, onSubmit }) {
     };
 
     return(
-        <form onSubmit={handleSubmit} className="">
-        <div className="">
+        <form onSubmit={handleSubmit} className="appointment-form">
+        <div className="form-group">
           <label htmlFor="name">Name:</label>
           <input
             type="text"
@@ -35,7 +35,7 @@ function AppointmentForm({ doctorName, doctorSpecialty, onSubmit }) {
             required
           />
         </div>
-        <div className="">
+        <div className="form-group">
           <label htmlFor="phoneNumber">Phone Number:</label>
           <input
             type="tel"
@@ -46,7 +46,7 @@ function AppointmentForm({ doctorName, doctorSpecialty, onSubmit }) {
             required
           />
         </div>
-        <div className="">
+        <div className="form-group">
           <label htmlFor="bookingDate">Date of Appointment:</label>
           <input
             type="date"
@@ -56,16 +56,16 @@ function AppointmentForm({ doctorName, doctorSpecialty, onSubmit }) {
             required
           />
           </div>
-          <div className="">
+          <div className="form-group">
             <label htmlFor="timeSlot">Time Slot:</label>
-            <select id="timeSlot" value={timeSlot} onChange={handleSelection} required>
-                <option value="">Select an available time:</option>
+            <select id="timeSlot" className="form-control" value={timeSlot} onChange={handleSelection} required>
+                <option value="" disabled hidden>Select an available time:</option>
                 <option value="9:00 AM">9:00 AM</option>
                 <option value="11:00 AM">11:00 AM</option>
                 <option value="2:30 PM">2:30 PM</option>
-                <option value="4:30 PM" >4:30 PM</option>
+                <option value="4:30 PM">4:30 PM</option>
             </select>
-        </div>
+          </div>
         <button type="submit">Book Now</button>
       </form>
     );

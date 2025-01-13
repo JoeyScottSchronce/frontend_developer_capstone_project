@@ -36,7 +36,7 @@ function DoctorCard({ image, name, specialty, experience, rating }) {
 
   return (
     <div className='container'>
-      <div>
+      <div className=''>
         <div><img src={image} alt="doctor" className="doctor_image" /></div>
         <div className="name">{name}</div>
         <div>{specialty}</div>
@@ -61,13 +61,15 @@ function DoctorCard({ image, name, specialty, experience, rating }) {
           onClose={() => setShowForm(false)}
         >
           {(close) => (
-            <div className='' style={{ height: '80vh', overflow: 'scroll' }}>
-              <div>
+            <div className='' style={{ height: '100vh', overflow: 'none' }}>
+              <div className='form-doctor-section'>
                 <div><img src={image} alt='doctor' className='doctor_image' /></div>
-                <div className='name'>{name}</div>
-                <div>{specialty}</div>
-                <div>{experience} years of experience</div>
-                <div>Ratings: {rating}</div>
+                <div className='doctor-section-info'>
+                    <div className='name'>{name}</div>
+                    <div>{specialty}</div>
+                    <div>{experience} years of experience</div>
+                    <div>Ratings: {rating}</div>
+                </div>
               </div>
 
               {appointments.length > 0 ? (

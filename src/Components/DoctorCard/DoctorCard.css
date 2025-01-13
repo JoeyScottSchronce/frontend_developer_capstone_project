@@ -30,3 +30,27 @@
 h3 {
     text-align: center;
 }
+
+.appointment-form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  /* height: auto;
+  overflow-y: auto; */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-doctor-section {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.doctor-section-info {
+    margin: 10px;
+}
