@@ -56,7 +56,7 @@ function BookingConsultation() {
     }, [searchParams, navigate]);
 
     return (
-        <div className=''>
+        <div>
             <div  className="searchpage-container">
                 <FindDoctorSearch onSearch={handleSearch} />
                 <div className="search-results-container">
@@ -64,12 +64,14 @@ function BookingConsultation() {
                     <div className=''>
                         <h2>{filteredDoctors.length} doctors are available {searchParams.get('location')}</h2>
                         <h3>Book appointments with minimum wait-time & verified doctor details</h3>
-                        {filteredDoctors.length > 0 ? (
+                        <div className='filtered-doctors'>
+                            {filteredDoctors.length > 0 ? (
                             filteredDoctors.map(doctor =>
                             <DoctorCard className="doctorcard" {...doctor} key={doctor.name} setNotify={setNotify}/>)
                         ) : (
                         <p>No doctors found.</p>
                         )}
+                        </div>
                     </div>
                     ) : (
                         ''

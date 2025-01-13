@@ -8,7 +8,7 @@ const searchOptions = [
     'Gynecologist/obstetrician',
     'General Physician',
     'Dermatologist',
-    'Ear-nose-throat (ent) Specialist',
+    'Ear-nose-throat Specialist',
     'Homeopath',
     'Ayurveda'
 ]

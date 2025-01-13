@@ -39,3 +39,11 @@ h2 {
     text-align: left;
     font-size: 15px;
 }
+
+.filtered-doctors {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
