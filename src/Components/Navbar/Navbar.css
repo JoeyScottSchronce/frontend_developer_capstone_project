@@ -10,6 +10,7 @@ nav {
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
+    z-index: 1000;
 } 
 
 /* Styling for the logo in the navbar */
