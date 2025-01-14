@@ -19,13 +19,13 @@ function Services() {
                 </Link>
             </div>
             <div className="image-container">
-                <Link to="/self-checkup" className="link_box">
+                <Link to="/SelfCheckup" className="link_box">
                 <img src={`${process.env.PUBLIC_URL}/service_image_3.jpg`} className="service_image" alt="instant consultation" />
                     <h4>Self Checkup</h4>
                 </Link>
             </div>
             <div className="image-container">
-                <Link to="/tips_and_guildance" className="link_box">
+                <Link to="/HealthTips" className="link_box">
                 <img src={`${process.env.PUBLIC_URL}/service_image_4.jpg`} className="service_image" alt="instant consultation" />
                     <h4>Health Tips and Guildance</h4>
                 </Link>

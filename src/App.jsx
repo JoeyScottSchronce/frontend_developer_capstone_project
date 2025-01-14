@@ -12,6 +12,8 @@ import BookingConsultation from './Components/BookingConsultation';
 import Notification from './Components/Notification/Notification';
 import ReviewForm from './Components/ReviewForm/ReviewForm';
 import { NotificationProvider } from './Components/Notification/NotificationContext';
+import HealthTips from './Components/HealthTips/HealthTips';
+import SelfCheckup from './Components/SelfCheckup';
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/instant-consultation" element={<InstantConsultation />} />
           <Route path="/booking-consultation" element={<BookingConsultation />} />
           <Route path='/ReviewForm' element={<ReviewForm />} />
+          <Route path='/HealthTips' element={<HealthTips />} />
+          <Route path='/SelfCheckup' element={<SelfCheckup />} />
         </Routes>
       </BrowserRouter>
     </NotificationProvider>

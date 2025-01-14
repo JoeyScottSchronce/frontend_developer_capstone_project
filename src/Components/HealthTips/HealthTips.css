@@ -1,0 +1,12 @@
+.health-tips-container {
+    margin-top: 100px;
+}
+
+p {
+    max-width: 80ch;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    hyphens: auto;
+}
