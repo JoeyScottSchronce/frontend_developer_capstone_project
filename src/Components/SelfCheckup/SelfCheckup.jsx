@@ -1,9 +1,10 @@
 import React from "react";
+import './SelfCheckup.css';
 
 function SelfCheckup() {
     return(
-        <div>
-
+        <div className="self-checkup-container">
+            <h1>Self Checkup</h1>
         </div>
     )
 }
