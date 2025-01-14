@@ -1,13 +1,16 @@
-import React, { useState, useEffect} from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import UserDropdown from './UserDropdown';
 
 function Navbar() {
     const [isDisplayed, setIsDisplayed] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
+    const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+    const dropdownRef = useRef(null);  // Reference for the dropdown
     const navigate = useNavigate();
 
     const handleLogout = () => {
@@ -60,6 +63,19 @@ function Navbar() {
         };
     }, []);
 
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+                setIsDropdownVisible(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, [dropdownRef]);
+
     const toggleMenu = () => {
         setIsDisplayed(!isDisplayed); 
     };
@@ -74,61 +90,68 @@ function Navbar() {
         navigate(`/${path}`);
     };
 
-    return (
-            <nav>
-                <div className="nav__logo">
-                    <Link to="/">
-                        Stay Healthy
-                        <img src="https://cdn.pixabay.com/photo/2021/11/20/03/17/doctor-6810751_1280.png" alt="doctor with a stethoscope" height="35" width="35" />
-                    </Link>
-                </div>
-                <div className="nav__icon" onClick={toggleMenu}>
-                    <i className={`fa ${isDisplayed ? 'fa-times' : 'fa-bars'}`}></i>
-                </div>
+    const toggleDropdown = () => {
+        setIsDropdownVisible(!isDropdownVisible);
+    };
 
-                {isDisplayed && (
-                    <ul className="nav__links active">
-                        <li className="link">
-                            <Link to="/" onClick={hideMenu}>Home</Link>
-                        </li>
-                        <li className="link">
-                            <Link to="#" onClick={hideMenu}>Appointments</Link>
-                        </li>
-                        <li className="link">
-                            <Link to="/healthblog" onClick={hideMenu}>Health Blog</Link>
-                        </li>
-                        <li className="link">
-                            <Link to="/ReviewForm" onClick={hideMenu}>Reviews</Link>
-                        </li>
-                        
-                        {isLoggedIn ? (
-                            <>
-                                <select className="Username" onChange={(e) => handleNavigate(e.target.value)} defaultValue="">
-                                    <option className='Username' value="">{username}</option>
-                                    <option className='profile-options' value="Profile">Profile</option>
-                                    <option className='profile-options' value="Reports">Reports</option>
-                                </select>
-                                <li className="link">
-                                    <button className="btn1" onClick={handleLogout}>Logout</button>
-                                </li>
-                            </> 
-                        ) : (
-                            <>
-                                <li className="link">
-                                    <Link to="/SignUp" onClick={hideMenu}>
-                                        <button className="btn1">Sign Up</button>
-                                    </Link>
-                                </li>
-                                <li className="link">
-                                    <Link to="/Login" onClick={hideMenu}>
-                                        <button className="btn1">Login</button>
-                                    </Link>
-                                </li>
-                            </>
-                        )}
-                    </ul>
-                )}
-            </nav>
+    const handleDropdownItemClick = () => {
+        setIsDropdownVisible(false);
+    };
+
+    return (
+        <nav>
+            <div className="nav__logo">
+                <Link to="/">
+                    Stay Healthy
+                    <img src="https://cdn.pixabay.com/photo/2021/11/20/03/17/doctor-6810751_1280.png" alt="doctor with a stethoscope" height="35" width="35" />
+                </Link>
+            </div>
+            <div className="nav__icon" onClick={toggleMenu}>
+                <i className={`fa ${isDisplayed ? 'fa-times' : 'fa-bars'}`}></i>
+            </div>
+
+            {isDisplayed && (
+                <ul className="nav__links active">
+                    <li className="link">
+                        <Link to="/" onClick={hideMenu}>Home</Link>
+                    </li>
+                    <li className="link">
+                        <Link to="#" onClick={hideMenu}>Appointments</Link>
+                    </li>
+                    <li className="link">
+                        <Link to="/healthblog" onClick={hideMenu}>Health Blog</Link>
+                    </li>
+                    <li className="link">
+                        <Link to="/ReviewForm" onClick={hideMenu}>Reviews</Link>
+                    </li>
+                    
+                    {isLoggedIn ? (
+                        <>
+                            <li className='Username'>
+                                <span onClick={toggleDropdown}>{username}</span>
+                            </li>
+                            <li className="link">
+                                <button className="btn1" onClick={handleLogout}>Logout</button>
+                            </li>
+                        </> 
+                    ) : (
+                        <>
+                            <li className="link">
+                                <Link to="/SignUp" onClick={hideMenu}>
+                                    <button className="btn1">Sign Up</button>
+                                </Link>
+                            </li>
+                            <li className="link">
+                                <Link to="/Login" onClick={hideMenu}>
+                                    <button className="btn1">Login</button>
+                                </Link>
+                            </li>
+                        </>
+                    )}
+                </ul>
+            )}
+            {isDropdownVisible && <UserDropdown ref={dropdownRef} onItemClick={handleDropdownItemClick}/>}
+        </nav>
     );
 }
 

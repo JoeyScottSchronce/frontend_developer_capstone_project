@@ -1,0 +1,26 @@
+.user-dropdown {
+    padding: 25px;
+    border: 2px solid red;
+    z-index: 1000;
+    color: black;
+    position: absolute;
+    top: 70px; /* Adjust as needed */
+    right: 130px; /* Or left, depending on where you want it */
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    z-index: 1000;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.user-dropdown a {
+    display: block;
+    padding: 8px;
+    color: #333;
+    text-decoration: none;
+}
+
+.user-dropdown a:hover {
+    background-color: #f4f4f4;
+}
