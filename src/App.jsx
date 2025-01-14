@@ -11,8 +11,6 @@ import InstantConsultation from './Components/InstantConsultation/InstantConsult
 import BookingConsultation from './Components/BookingConsultation';
 import Notification from './Components/Notification/Notification';
 import ReviewForm from './Components/ReviewForm/ReviewForm';
-import DisplayDoctors from './Components/DoctorCard/DisplayDoctors';
-import FindDoctorSearch from './Components/FindDoctorSearch/FindDoctorSearch';
 import { NotificationProvider } from './Components/Notification/NotificationContext';
 
 function App() {
@@ -31,9 +29,6 @@ function App() {
           <Route path="/instant-consultation" element={<InstantConsultation />} />
           <Route path="/booking-consultation" element={<BookingConsultation />} />
           <Route path='/ReviewForm' element={<ReviewForm />} />
-          {/* Delete these before pushing to prod */}
-          <Route path="/FindDoctorSearch" element={<FindDoctorSearch />} />
-          <Route path="/DisplayDoctors" element={<DisplayDoctors />} />
         </Routes>
       </BrowserRouter>
     </NotificationProvider>
