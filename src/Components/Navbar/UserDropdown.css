@@ -1,6 +1,5 @@
 .user-dropdown {
     padding: 25px;
-    border: 2px solid red;
     z-index: 1000;
     color: black;
     position: absolute;
@@ -23,4 +22,22 @@
 
 .user-dropdown a:hover {
     background-color: #f4f4f4;
+}
+
+@media (max-width: 919px) {
+    .user-dropdown {
+        padding: 25px;
+        z-index: 1000;
+        color: black;
+        position: absolute;
+        top: 270px;
+        left: 50%; /* Center it horizontally */
+        transform: translateX(-50%); /* Offset by 50% */
+        width: 100px;
+        background-color: white;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 4px;
+    }
 }
