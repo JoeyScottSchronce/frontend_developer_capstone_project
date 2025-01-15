@@ -31,10 +31,11 @@ npm install
 * Create a MongoDB server and copy the MONGO_HOST and MONGO_PASSWORD from the "Connection Information" tab.
   
 * Create a new file in the server folder, name it `.env`, and paste in this line: <br>
-```MONGO_URI=mongodb://root:<MONGO_PASSWORD>@<MONGO_HOST>:27017``` <br>
-Make sure this file is in the server folder, not in the root folder.
+<br> ```MONGO_URI=mongodb://root:<MONGO_PASSWORD>@<MONGO_HOST>:27017``` <br>
+<br> Make sure this file is in the server folder, not in the root folder.
   
-* Paste the MONGO_HOST and MONGO_PASSWORD you copied into the appropriate locations  of the MONGO_URI line, replacing `<MONGO_HOST>` and `<MONGO_PASSWORD>`.
+* Paste the MONGO_HOST and MONGO_PASSWORD you copied into the appropriate locations <br>
+of the MONGO_URI line, replacing `<MONGO_HOST>` and `<MONGO_PASSWORD>`.
 
 * Run `node index` in the terminal to start the server.
 
