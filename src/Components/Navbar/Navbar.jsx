@@ -103,7 +103,7 @@ function Navbar() {
             <div className="nav__logo">
                 <Link to="/">
                     Stay Healthy
-                    <img src="https://cdn.pixabay.com/photo/2021/11/20/03/17/doctor-6810751_1280.png" alt="doctor with a stethoscope" height="35" width="35" />
+                    <img src={`${process.env.PUBLIC_URL}/doctor-with-stethoscope.jpg`} alt="doctor with a stethoscope" height="35" width="35" />
                 </Link>
             </div>
             <div className="nav__icon" onClick={toggleMenu}>
