@@ -116,10 +116,10 @@ function Navbar() {
                         <Link to="/" onClick={hideMenu}>Home</Link>
                     </li>
                     <li className="link">
-                        <Link to="#" onClick={hideMenu}>Appointments</Link>
+                        <Link to="/Appointments" onClick={hideMenu}>Appointments</Link>
                     </li>
                     <li className="link">
-                        <Link to="/healthblog" onClick={hideMenu}>Health Blog</Link>
+                        <Link to="/HealthTips" onClick={hideMenu}>Health Blog</Link>
                     </li>
                     <li className="link">
                         <Link to="/ReviewForm" onClick={hideMenu}>Reviews</Link>

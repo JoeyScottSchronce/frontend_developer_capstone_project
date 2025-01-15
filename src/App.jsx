@@ -14,6 +14,7 @@ import ReviewForm from './Components/ReviewForm/ReviewForm';
 import { NotificationProvider } from './Components/Notification/NotificationContext';
 import HealthTips from './Components/HealthTips/HealthTips';
 import SelfCheckup from './Components/SelfCheckup/SelfCheckup';
+import PageNotFound from './Components/PageNotFound';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path='/ReviewForm' element={<ReviewForm />} />
           <Route path='/HealthTips' element={<HealthTips />} />
           <Route path='/SelfCheckup' element={<SelfCheckup />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </NotificationProvider>
