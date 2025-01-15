@@ -13,3 +13,36 @@ The platform enables users to view available slots, select providers, manage the
 * Appointment booking page featuring multiple doctors, their specialties, ratings, and their experience details.
 * Reviews page allowing users to leave feedback after their appointment and rate their doctors.
 
+## **Getting Started**
+* First, open a new terminal and run the following lines in the terminal:
+
+```
+git clone https://github.com/JoeyScottSchronce/frontend_developer_capstone_project
+cd frontend_developer_capstone_project 
+npm install
+npm i react-router-dom
+npm install --save-dev web-vitals
+npm i reactjs-popup
+npm install dotenv
+cd server
+npm install
+```
+
+* Create a MongoDB server and copy the MONGO_HOST and MONGO_PASSWORD from the "Connection Information" tab.
+  
+* Create a new file in the server folder, name it `.env`, and paste in this line:
+  `MONGO_URI=mongodb://root:<MONGO_PASSWORD>@<MONGO_HOST>:27017`
+  (make sure this file is in the server folder, not in the root folder).
+  
+* Paste the MONGO_HOST and MONGO_PASSWORD you copied into the appropriate locations of the MONGO_URI line, replacing `<MONGO_HOST>` and `<MONGO_PASSWORD>`.
+* Run `node index` in the terminal to start the server.
+
+* Next, open a new terminal and run the folllowing lines in the terminal:
+```
+cd frontend_developer_capstone_project
+npm start
+```
+
+* Finally, go to the Skills Network Toolbox and launch the application on port `3000` to view it in the browser.
+
+
