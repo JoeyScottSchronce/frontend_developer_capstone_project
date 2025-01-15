@@ -58,7 +58,7 @@ function AppointmentForm({ doctorName, doctorSpecialty, onSubmit }) {
           </div>
           <div className="form-group">
             <label htmlFor="timeSlot">Time Slot:</label>
-            <select id="timeSlot" className="form-control" value={timeSlot} onChange={handleSelection} required>
+            <select id="timeSlot" className="time-slot" value={timeSlot} onChange={handleSelection} required>
                 <option value="" disabled hidden>Select an available time:</option>
                 <option value="9:00 AM">9:00 AM</option>
                 <option value="11:00 AM">11:00 AM</option>

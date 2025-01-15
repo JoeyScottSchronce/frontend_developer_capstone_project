@@ -61,7 +61,7 @@ function DoctorCard({ image, name, specialty, experience, rating }) {
           onClose={() => setShowForm(false)}
         >
           {(close) => (
-            <div className='' style={{ height: '100vh', overflow: 'none' }}>
+            <div style={{ height: '100vh', overflow: 'scroll' }}>
               <div className='form-doctor-section'>
                 <div><img src={image} alt='doctor' className='doctor_image' /></div>
                 <div className='doctor-section-info'>
