@@ -37,3 +37,16 @@
     width: 200px;
     align-self: left;
 }
+
+.SC-p {
+    max-width: 80ch;
+    word-wrap: break-word;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    hyphens: auto;
+}
+
+.SC-h3 {
+    text-align: left;
+}

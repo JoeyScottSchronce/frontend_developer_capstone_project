@@ -16,7 +16,7 @@ function SelfCheckup() {
           <img src={`${process.env.PUBLIC_URL}/self-health-checkup-five.png`}
                className="self-checkup-img-one" alt=" bottles of vitamins" />
         </div>
-        <p>Performing self-health checkups is a vital practice that allows individuals to take control 
+        <p className="SC-p" >Performing self-health checkups is a vital practice that allows individuals to take control 
            of their well-being. By regularly assessing different aspects of your physical and mental health, 
            you can spot potential issues early and make informed decisions about seeking professional 
            medical advice. A thorough self-health checkup may include monitoring vital signs such as blood 
@@ -33,8 +33,8 @@ function SelfCheckup() {
             </div>
 
         <div>
-            <h3>Self Checkup Guide</h3>
-            <p>
+            <h3 className="SC-h3">Self Checkup Guide</h3>
+            <p className="SC-p">
           Performing regular self-health checkups is an essential practice for maintaining optimal well-being. 
           By frequently evaluating various aspects of your physical and mental health, you can identify potential 
           issues early and take proactive steps to address them. A comprehensive self-checkup involves monitoring

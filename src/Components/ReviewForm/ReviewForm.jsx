@@ -14,7 +14,7 @@ const ReviewsAndFeedback = () => {
   const [formData, setFormData] = useState({
     name: '',
     review: '',
-    rating: 0,
+    rating: 5,
   });
   const [submittedMessage, setSubmittedMessage] = useState('');
   const [showWarning, setShowWarning] = useState(false);
