@@ -115,7 +115,9 @@ function Login() {
                     </div>
                     <br />
                     {/* Additional login text for 'Forgot Password' option */}
-                    <div className="forgot-password-text">Forgot Password?</div>
+                    <div className="forgot-password-text">
+                    <Link to="/password-reset" style={{ color: '#2190FF' }}> Forgot Password? </Link>
+                    </div>
                 </form>
             </div>
         </div>
