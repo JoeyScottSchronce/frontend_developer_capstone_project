@@ -38,7 +38,7 @@ npm install
 of the MONGO_URI line, replacing `<MONGO_HOST>` and `<MONGO_PASSWORD>`.
 
 * Run `node index` in the terminal to start the server.
-
+<br>
 * Next, open a new terminal and run the folllowing lines in the terminal:
 
 ```
