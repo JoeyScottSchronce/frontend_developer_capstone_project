@@ -3,16 +3,17 @@
     font-family: "Poppins", sans-serif;
     box-sizing: border-box;
 }
+
 .hero-section {
     height: 100vh;
-    padding-top: 15rem;
+    padding-top: 13rem;
     background-color: transparent;
     z-index: -1;
 }
 .hero-section .flex-hero {
     flex-direction: column;
     gap: 30px;
-    text-align:center;
+    text-align: center;
 }
 
 .hero-section .flex-hero h1 {

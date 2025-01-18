@@ -28,11 +28,9 @@ function LandingPage() {
                     <button className="button">Get Started</button>
                 </Link>
 
-                <h4>
-                    Thank you so much for visiting my Capstone Project! Please have a look around, click on some buttons, and enjoy your stay.
-                    When you're ready to see even more of my work, head on over to my
-                    <a href="https://github.com/JoeyScottSchronce" target="_blank" rel="noopener noreferrer" alt='GitHub account link'> GitHub Portfolio </a>
-                    and check out what else I've been up to. 
+                <h4 className='peer-review-message'>
+                    If you are a peer grading this Capstone Project, please read the "Getting Started" section of my README.md file on GitHub for the instructions to launch this application correctly.
+                    The server functionality will not work correctly if you do not follow the instructions in the README.md file.
                 </h4>
                     
             </div>

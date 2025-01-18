@@ -30,6 +30,8 @@ function Services() {
                     <h4>Health Tips and Guildance</h4>
                 </Link>
             </div>
+            <h2 style={{color:"red", width:"80ch", textAlign:"center"}}>If you are a peer grading this Capstone Project, please read the "Getting Started"
+            section of my README.md file on GitHub for the instructions to launch this application correctly.</h2>
         </div>
     )
 };
