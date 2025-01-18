@@ -14,10 +14,9 @@ The platform enables users to view available slots, select providers, manage the
 * Reviews page allowing users to leave feedback after their appointment and rate their doctors.
 
 ## **Getting Started**
-* First, open a new terminal and run the following lines in the terminal:
 
+* After cloning this repository, open a new terminal and run the following lines in the terminal:
 ```
-git clone https://github.com/JoeyScottSchronce/frontend_developer_capstone_project
 cd frontend_developer_capstone_project 
 npm install
 npm i react-router-dom
