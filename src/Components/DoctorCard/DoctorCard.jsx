@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import './DoctorCard.css';
 import Popup from 'reactjs-popup';
-import { v4 as uuidv4 } from 'uuid';
+//import { v4 as uuidv4 } from 'uuid';
 import AppointmentForm from '../AppointmentForm/AppointmentForm';
 import { NotificationContext } from '../Notification/NotificationContext';
 
@@ -22,7 +22,7 @@ function DoctorCard({ image, name, specialty, experience, rating }) {
 
   const handleSubmit = (appointmentData) => {
     const newAppointment = {
-      id: uuidv4(),
+//      id: uuidv4(),
       doctorName: name, // Add doctor's name
       doctorSpecialty: specialty, // Add doctor's specialty
       ...appointmentData,
