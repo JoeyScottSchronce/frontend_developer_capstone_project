@@ -10,7 +10,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 // Export the Webpack configuration as an object
 module.exports = {
   // Specify the entry point of the application, which is the file that Webpack will start building from
-  entry: './src/index.js',
+  entry: './src/index.jsx',
 
   // Specify the output configuration
   output: {
