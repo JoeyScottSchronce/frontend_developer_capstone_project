@@ -113,7 +113,7 @@ function Navbar() {
             {isDisplayed && (
                 <ul className="nav__links active">
                     <li className="link">
-                        <Link to="/" onClick={hideMenu}>Home</Link>
+                        <Link to="/frontend_developer_capstone_project" onClick={hideMenu}>Home</Link>
                     </li>
                     <li className="link">
                         <Link to="/Appointments" onClick={hideMenu}>Appointments</Link>
