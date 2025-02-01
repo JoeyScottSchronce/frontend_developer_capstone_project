@@ -101,7 +101,7 @@ function Navbar() {
     return (
         <nav>
             <div className="nav__logo">
-                <Link to="/frontend_developer_capstone_project/">
+                <Link to="/frontend_developer_capstone_project">
                     Stay Healthy
                     <img src="/doctor-with-stethoscope.jpg" alt="doctor with a stethoscope" height="35" width="35" />
                 </Link>
