@@ -23,7 +23,7 @@ function App() {
         <Notification />
         <Navbar />
         <Routes>
-          <Route path="/" element={<LandingPage />} />
+          <Route path="/frontend_developer_capstone_project/" element={<LandingPage />} />
           <Route path="/Login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Profile" element={<ProfileCard />} />
