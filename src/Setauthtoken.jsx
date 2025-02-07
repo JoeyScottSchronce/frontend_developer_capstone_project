@@ -8,11 +8,11 @@ const Setauthtoken = () => {
     useEffect(() => {
         if (!params.authtoken || params.authtoken === "") {  
             console.log(params);
-            navigate('/login');
+            navigate('/frontend_developer_capstone_project/login');
         }
         else {
             sessionStorage.setItem('auth-token', params.authtoken);
-            navigate('/');
+            navigate('/frontend_developer_capstone_project');
         }
         // eslint-disable-next-line
     }, [])

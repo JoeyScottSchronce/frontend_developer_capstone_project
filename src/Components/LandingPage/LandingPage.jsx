@@ -24,7 +24,7 @@ function LandingPage() {
                         <div className="blue1 blob"></div>
                     </div>
 
-                <Link to="/Services">
+                <Link to="/frontend_developer_capstone_project/services">
                     <button className="button">Get Started</button>
                 </Link>
 

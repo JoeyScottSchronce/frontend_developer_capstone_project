@@ -80,7 +80,7 @@ function SignUp() {
                 sessionStorage.setItem("phone", phone);
                 sessionStorage.setItem("email", email);
                 // Redirect user to home page
-                navigate("/");
+                navigate("/frontend_developer_capstone_project");
                 window.location.reload(); // Refresh the page
             } else {
                 if (json.errors) {
@@ -114,7 +114,7 @@ function SignUp() {
                 <div className="sign-up-signup-text">
                     <h1>Sign Up</h1>
                 </div>
-                <div className="sign-up-signup-text1"> Already a member? <span><Link to="/Login" style={{ color: '#2190FF' }}> Login</Link></span></div>
+                <div className="sign-up-signup-text1"> Already a member? <span><Link to="/frontend_developer_capstone_project/login" style={{ color: '#2190FF' }}> Login</Link></span></div>
                 <div className="sign-up-signup-page">
                     <form method="POST" onSubmit={register}>
 

@@ -22,7 +22,7 @@ const FindDoctorSearch = () => {
     const handleSearch = (specialty) => {
         setSearchDoctor(specialty);
         setSeeResults(true);
-        navigate(`/booking-consultation?specialty=${specialty}`);
+        navigate(`/frontend_developer_capstone_project/booking-consultation?specialty=${specialty}`);
     }
 
     return (

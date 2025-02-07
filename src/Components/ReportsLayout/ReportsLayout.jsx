@@ -21,12 +21,12 @@ function Reports() {
                 <td>Dr. John Doe</td>
                 <td>Cardiology</td>
                 <td>
-                  <a href="patient_report.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="/frontend_developer_capstone_project/patient_report.pdf" target="_blank" rel="noopener noreferrer">
                     <button>View Report</button>
                   </a>
                 </td>
                 <td>
-                  <a href="patient_report.pdf" download>
+                  <a href="/frontend_developer_capstone_project/patient_report.pdf" download>
                     <button>Download Report</button>
                   </a>
                 </td>
@@ -36,12 +36,12 @@ function Reports() {
                 <td>Dr. Jane Smith</td>
                 <td>Dermatology</td>
                 <td>
-                  <a href="patient_report.pdf" target="_blank" rel="noopener noreferrer">
+                  <a href="/frontend_developer_capstone_project/patient_report.pdf" target="_blank" rel="noopener noreferrer">
                     <button>View Report</button>
                   </a>
                 </td>
                 <td>
-                  <a href="patient_report.pdf" download>
+                  <a href="/frontend_developer_capstone_project/patient_report.pdf" download>
                     <button>Download Report</button>
                   </a>
                 </td>

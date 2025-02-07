@@ -5,8 +5,8 @@ import "./UserDropdown.css";
 function UserDropdown({ onItemClick }) {
     return (
         <div className="user-dropdown">
-            <Link to="/Profile" onClick={onItemClick}>Profile</Link>
-            <Link to="/Reports" onClick={onItemClick}>Reports</Link>
+            <Link to="/frontend_developer_capstone_project/profile" onClick={onItemClick}>Profile</Link>
+            <Link to="/frontend_developer_capstone_project/reports" onClick={onItemClick}>Reports</Link>
         </div>
     );
 }

@@ -25,16 +25,16 @@ function App() {
         <Routes>
           <Route path="/frontend_developer_capstone_project" element={<LandingPage />} />
           <Route path="/frontend_developer_capstone_project/login" element={<Login />} />
-          <Route path="/SignUp" element={<SignUp />} />
-          <Route path="/Profile" element={<ProfileCard />} />
-          <Route path="/Reports" element={<Reports />} />
-          <Route path="/Services" element={<Services />} />
-          <Route path="/instant-consultation" element={<InstantConsultation />} />
-          <Route path="/booking-consultation" element={<BookingConsultation />} />
-          <Route path='/ReviewForm' element={<ReviewForm />} />
-          <Route path='/HealthTips' element={<HealthTips />} />
-          <Route path='/SelfCheckup' element={<SelfCheckup />} />
-          <Route path="*" element={<PageNotFound />} />
+          <Route path="/frontend_developer_capstone_project/signup" element={<SignUp />} />
+          <Route path="/frontend_developer_capstone_project/profile" element={<ProfileCard />} />
+          <Route path="/frontend_developer_capstone_project/reports" element={<Reports />} />
+          <Route path="/frontend_developer_capstone_project/services" element={<Services />} />
+          <Route path="/frontend_developer_capstone_project/instant-consultation" element={<InstantConsultation />} />
+          <Route path="/frontend_developer_capstone_project/booking-consultation" element={<BookingConsultation />} />
+          <Route path='/frontend_developer_capstone_project/review-form' element={<ReviewForm />} />
+          <Route path='/frontend_developer_capstone_project/health-tips' element={<HealthTips />} />
+          <Route path='/frontend_developer_capstone_project/self-checkup' element={<SelfCheckup />} />
+          <Route path="/frontend_developer_capstone_project/*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
     </NotificationProvider>

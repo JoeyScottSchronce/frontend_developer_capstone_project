@@ -103,7 +103,7 @@ function Navbar() {
             <div className="nav__logo">
                 <Link to="/frontend_developer_capstone_project">
                     Stay Healthy
-                    <img src="/public/doctor-with-stethoscope.jpg" alt="doctor with a stethoscope" height="35" width="35" />
+                    <img src="/frontend_developer_capstone_project/doctor-with-stethoscope.jpg" alt="doctor with stethoscope" height="35" width="35" />
                 </Link>
             </div>
             <div className="nav__icon" onClick={toggleMenu}>
@@ -116,13 +116,13 @@ function Navbar() {
                         <Link to="/frontend_developer_capstone_project" onClick={hideMenu}>Home</Link>
                     </li>
                     <li className="link">
-                        <Link to="/Appointments" onClick={hideMenu}>Appointments</Link>
+                        <Link to="/frontend_developer_capstone_project/appointments" onClick={hideMenu}>Appointments</Link>
                     </li>
                     <li className="link">
-                        <Link to="/HealthTips" onClick={hideMenu}>Health Blog</Link>
+                        <Link to="/frontend_developer_capstone_project/health-tips" onClick={hideMenu}>Health Blog</Link>
                     </li>
                     <li className="link">
-                        <Link to="/ReviewForm" onClick={hideMenu}>Reviews</Link>
+                        <Link to="/frontend_developer_capstone_project/review-form" onClick={hideMenu}>Reviews</Link>
                     </li>
                     
                     {isLoggedIn ? (
@@ -137,7 +137,7 @@ function Navbar() {
                     ) : (
                         <>
                             <li className="link">
-                                <Link to="/SignUp" onClick={hideMenu}>
+                                <Link to="/frontend_developer_capstone_project/signup" onClick={hideMenu}>
                                     <button className="btn1">Sign Up</button>
                                 </Link>
                             </li>

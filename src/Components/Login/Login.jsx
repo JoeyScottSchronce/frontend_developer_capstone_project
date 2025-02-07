@@ -16,7 +16,7 @@ function Login() {
     // Check if user is already authenticated, then redirect to home page
     useEffect(() => {
         if (sessionStorage.getItem("auth-token")) {
-            navigate("/");
+            navigate("/frontend_developer_capstone_project");
         }
     }, []);
 
@@ -41,7 +41,7 @@ function Login() {
             sessionStorage.setItem('auth-token', json.authtoken);
             sessionStorage.setItem('email', email);
             // Redirect to home page and reload the window
-            navigate('/');
+            navigate('/frontend_developer_capstone_project');
             window.location.reload();
         } else {
             // Handle errors if authentication fails
@@ -71,7 +71,7 @@ function Login() {
                 <h2>Login</h2>
             </div>
             {/* Additional login text with a link to Sign Up page */}
-            <div className="login-text1"> Are you a new member? <span><Link to="/SignUp" style={{ color: '#2190FF' }}> Sign Up Here</Link></span>
+            <div className="login-text1"> Are you a new member? <span><Link to="/frontend_developer_capstone_project/signup" style={{ color: '#2190FF' }}> Sign Up Here</Link></span>
             </div><br />
 
             {/* Div for login form */}
