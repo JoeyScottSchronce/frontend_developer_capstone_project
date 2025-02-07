@@ -116,7 +116,7 @@ function Login() {
                     <br />
                     {/* Additional login text for 'Forgot Password' option */}
                     <div className="forgot-password-text">
-                    <Link to="/password-reset" style={{ color: '#2190FF' }}> Forgot Password? </Link>
+                    <Link to="/frontend_developer_capstone_project/password-reset" style={{ color: '#2190FF' }}> Forgot Password? </Link>
                     </div>
                 </form>
             </div>
