@@ -24,7 +24,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/frontend_developer_capstone_project" element={<LandingPage />} />
-          <Route path="/Login" element={<Login />} />
+          <Route path="/frontend_developer_capstone_project/login" element={<Login />} />
           <Route path="/SignUp" element={<SignUp />} />
           <Route path="/Profile" element={<ProfileCard />} />
           <Route path="/Reports" element={<Reports />} />

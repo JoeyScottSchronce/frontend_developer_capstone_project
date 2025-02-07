@@ -103,7 +103,7 @@ function Navbar() {
             <div className="nav__logo">
                 <Link to="/frontend_developer_capstone_project">
                     Stay Healthy
-                    <img src="/doctor-with-stethoscope.jpg" alt="doctor with a stethoscope" height="35" width="35" />
+                    <img src="/public/doctor-with-stethoscope.jpg" alt="doctor with a stethoscope" height="35" width="35" />
                 </Link>
             </div>
             <div className="nav__icon" onClick={toggleMenu}>
@@ -142,7 +142,7 @@ function Navbar() {
                                 </Link>
                             </li>
                             <li className="link">
-                                <Link to="/Login" onClick={hideMenu}>
+                                <Link to="/frontend_developer_capstone_project/login" onClick={hideMenu}>
                                     <button className="btn1">Login</button>
                                 </Link>
                             </li>
