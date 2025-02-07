@@ -48,7 +48,7 @@ const InstantConsultation = () => {
         getDoctorsDetails();
         const authtoken = sessionStorage.getItem("auth-token");
         if (!authtoken) {
-            navigate("/login");
+            navigate("/frontend_developer_capstone_project/login");
         }
     }, [searchParams, navigate]);
 

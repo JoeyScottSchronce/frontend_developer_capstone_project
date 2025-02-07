@@ -15,7 +15,7 @@ const FindDoctorSearchIC = () => {
     const handleDoctorSelect = (speciality) => {
         setSearchDoctor(speciality);
         setDoctorResultHidden(true);
-        navigate(`/instant-consultation?speciality=${speciality}`);
+        navigate(`/frontend_developer_capstone_project/instant-consultation?speciality=${speciality}`);
         window.location.reload();
     }
     return (
@@ -37,12 +37,12 @@ const FindDoctorSearchIC = () => {
                             onChange={(e) => setSearchDoctor(e.target.value)}
                         />
                         
-                        <div className="findiconimg"><img className='findIcon' src="/search-icon.png" alt="search bar icon"/></div>
+                        <div className="findiconimg"><img className='findIcon' src="/frontend_developer_capstone_project/search-icon.png" alt="search bar icon"/></div>
                         <div className="search-doctor-input-results" hidden={doctorResultHidden}>
                             {
                                 specialities.map(speciality =>
                                 <div className="search-doctor-result-item" key={speciality} onMouseDown={() => handleDoctorSelect(speciality)}>
-                                    <span><img src="/search-icon.png" alt="" style={{height:"10px", width:"10px"}} width="12" /></span>
+                                    <span><img src="/frontend_developer_capstone_project/search-icon.png" alt="" style={{height:"10px", width:"10px"}} width="12" /></span>
                                     <span>{speciality}</span>
                                     <span>SPECIALITY</span>
                                 </div>)
