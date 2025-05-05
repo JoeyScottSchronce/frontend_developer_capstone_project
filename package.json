@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
+    "@vitejs/plugin-react": "^4.4.0",
     "cra-template": "1.2.0",
     "dotenv": "^16.4.7",
     "gh-pages": "^6.3.0",
@@ -11,7 +11,7 @@
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.5",
     "reactjs-popup": "^2.0.6",
-    "vite": "^6.0.14"
+    "vite": "^6.0.15"
   },
   "scripts": {
     "start": "vite",
