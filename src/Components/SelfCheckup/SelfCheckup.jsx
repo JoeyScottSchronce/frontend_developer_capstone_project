@@ -13,7 +13,7 @@ function SelfCheckup() {
 
       <div className="self-checkup-one">
         <div>
-          <img src="/frontend_developer_capstone_project/self-health-checkup-five.png"
+          <img src="/frontend_developer_capstone_project/self-health-checkup-five.webp"
                className="self-checkup-img-one" alt=" bottles of vitamins" />
         </div>
         <p className="SC-p" >Performing self-health checkups is a vital practice that allows individuals to take control 
@@ -28,7 +28,7 @@ function SelfCheckup() {
       </div>
 
       <div className="self-checkup-two">
-            <div><img src="/frontend_developer_capstone_project/self-health-checkup-one.png"
+            <div><img src="/frontend_developer_capstone_project/self-health-checkup-one.webp"
                 className="self-checkup-img-two" alt=" bottles of vitamins" />
             </div>
 
