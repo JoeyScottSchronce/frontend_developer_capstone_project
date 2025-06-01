@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { API_URL } from '../../config';
 import "./SignUp.css";
 
 function SignUp() {
     // State variables using useState hook
     const [role, setRole] = useState('');
-    const [name, setName] = useState('');
-    const [email, setEmail] = useState('');
-    const [phone, setPhone] = useState('');
-    const [password, setPassword] = useState('');
+    const [name, setName] = useState('demo_profile');
+    const [email, setEmail] = useState('demo_profile@example.com');
+    const [phone, setPhone] = useState('9198675309');
+    const [password, setPassword] = useState('password123');
     const [showerr, setShowerr] = useState({}); // State to show error messages
 
     const navigate = useNavigate(); // Navigation hook from react-router
@@ -18,7 +17,7 @@ function SignUp() {
     const register = async (e) => {
         e.preventDefault();
         setShowerr({});
-        
+
         // Check if role is selected
         if (!role) {
             setShowerr((prevErrors) => ({
@@ -45,58 +44,26 @@ function SignUp() {
             return;
         }
 
-        // API Call to register user
-        try {
-            const response = await fetch(`${API_URL}/api/auth/register`, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                    role: role,
-                    name: name,
-                    email: email,
-                    password: password,
-                    phone: phone,
-                }),
-            });
+        // Simulate authentication for demo_profile purposes
+        const demoEmail = "demo_profile@example.com";
+        const demoPassword = "password123";
 
-            // Check if the response status is 403
-            if (response.status === 403) {
-                setShowerr((prevErrors) => ({
-                    ...prevErrors,
-                    email: "Email already registered"
-                }));
-                return;
-            }
-
-            const json = await response.json(); // Parse the response JSON
-
-            if (json.authtoken) {
-                // Store user data in session storage
-                sessionStorage.setItem("auth-token", json.authtoken);
-                sessionStorage.setItem("role", role);
-                sessionStorage.setItem("name", name);
-                sessionStorage.setItem("phone", phone);
-                sessionStorage.setItem("email", email);
-                // Redirect user to home page
-                navigate("/frontend_developer_capstone_project");
-                window.location.reload(); // Refresh the page
-            } else {
-                if (json.errors) {
-                    // Update error state for specific fields
-                    const newErrors = {};
-                    for (const error of json.errors) {
-                        newErrors[error.param] = error.msg;
-                    }
-                    setShowerr(newErrors);
-                } else {
-                    setShowerr({ general: json.error });
-                }
-            }
-        } catch (error) {
-            console.error("Error during form submission:", error);
-            setShowerr({ general: "An unexpected error occurred. Please try again." });
+        if (email === demoEmail && password === demoPassword) {
+            // Simulate successful registration
+            sessionStorage.setItem("auth-token", "demo-auth-token");
+            sessionStorage.setItem("role", role);
+            sessionStorage.setItem("name", name);
+            sessionStorage.setItem("phone", phone);
+            sessionStorage.setItem("email", email);
+            // Redirect user to home page
+            navigate("/frontend_developer_capstone_project");
+            window.location.reload(); // Refresh the page
+        } else {
+            // Simulate error for invalid credentials
+            setShowerr((prevErrors) => ({
+                ...prevErrors,
+                general: "Invalid email or password. Please use demo_profile@example.com and password123."
+            }));
         }
     };
 
@@ -120,11 +87,11 @@ function SignUp() {
 
                         <div className='sign-up-form-group'>
                             <label htmlFor="role">Role</label>
-                            <select 
-                                id="role" 
-                                className="sign-up-form-control" 
+                            <select
+                                id="role"
+                                className="sign-up-form-control"
                                 value={role}
-                                onChange={(e) => setRole(e.target.value)} 
+                                onChange={(e) => setRole(e.target.value)}
                                 required>
                                 <option value="" disabled hidden>Select a Role</option>
                                 <option value="patient">Patient</option>
@@ -133,16 +100,15 @@ function SignUp() {
                             {showerr.role && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.role}</div>}
                         </div>
 
-
                         <div className="sign-up-form-group">
                             <label htmlFor="name">Name</label>
                             <input value={name} onChange={(e) => setName(e.target.value)}
-                                type="text"
-                                name="name"
-                                id="name"
-                                className="sign-up-form-control"
-                                placeholder="Enter your name"
-                                aria-describedby="helpId"
+                                   type="text"
+                                   name="name"
+                                   id="name"
+                                   className="sign-up-form-control"
+                                   placeholder="Enter your name"
+                                   aria-describedby="helpId"
                             />
                             {showerr.name && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.name}</div>}
                         </div>
@@ -150,12 +116,12 @@ function SignUp() {
                         <div className="sign-up-form-group">
                             <label htmlFor="phone">Phone</label>
                             <input value={phone} onChange={(e) => setPhone(e.target.value)}
-                                type="tel"
-                                name="phone"
-                                id="phone"
-                                required className="sign-up-form-control"
-                                placeholder="Enter your phone number"
-                                aria-describedby="helpId"
+                                   type="tel"
+                                   name="phone"
+                                   id="phone"
+                                   required className="sign-up-form-control"
+                                   placeholder="Enter your phone number"
+                                   aria-describedby="helpId"
                             />
                             {showerr.phone && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.phone}</div>}
                         </div>
@@ -163,12 +129,12 @@ function SignUp() {
                         <div className="sign-up-form-group">
                             <label htmlFor="email">Email</label>
                             <input value={email} onChange={(e) => setEmail(e.target.value)}
-                                type="email"
-                                name="email"
-                                id="email"
-                                className="sign-up-form-control"
-                                placeholder="Enter your email"
-                                aria-describedby="helpId"
+                                   type="email"
+                                   name="email"
+                                   id="email"
+                                   className="sign-up-form-control"
+                                   placeholder="Enter your email"
+                                   aria-describedby="helpId"
                             />
                             {showerr.email && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.email}</div>}
                         </div>
@@ -176,11 +142,11 @@ function SignUp() {
                         <div className="sign-up-form-group">
                             <label htmlFor="password">Password</label>
                             <input value={password} onChange={(e) => setPassword(e.target.value)}
-                                name="password"
-                                id="password"
-                                required className="sign-up-form-control"
-                                placeholder="Enter your password"
-                                aria-describedby="helpId"
+                                   name="password"
+                                   id="password"
+                                   required className="sign-up-form-control"
+                                   placeholder="Enter your password"
+                                   aria-describedby="helpId"
                             />
                             {showerr.password && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.password}</div>}
                         </div>
@@ -189,6 +155,7 @@ function SignUp() {
                             <button type="submit" className="sign-up-btn sign-up-btn-primary mb-2 mr-1 waves-effect waves-light">Submit</button>
                             <button type="reset" onClick={resetForm} className="sign-up-btn sign-up-btn-danger mb-2 waves-effect waves-light">Reset</button>
                         </div>
+                        {showerr.general && <div className="sign-up-err" style={{ color: 'red' }}>{showerr.general}</div>}
                     </form>
                 </div>
             </div>

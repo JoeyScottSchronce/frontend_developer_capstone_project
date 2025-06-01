@@ -1,13 +1,11 @@
-// Import React hooks
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { API_URL } from '../../config';
 import "./Login.css";
 
 function Login() {
     // State variables for email, password, and password visibility toggle
-    const [password, setPassword] = useState("");
-    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("password123");
+    const [email, setEmail] = useState("demo_profile@example.com");
     const [showPassword, setShowPassword] = useState(false);
 
     // Get navigation function from react-router-dom
@@ -23,35 +21,20 @@ function Login() {
     // Function to handle login form submission
     const login = async (e) => {
         e.preventDefault();
-        // Send a POST request to the login API endpoint
-        const res = await fetch(`${API_URL}/api/auth/login`, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                email: email,
-                password: password,
-            }),
-        });
-        // Parse the response JSON
-        const json = await res.json();
-        if (json.authtoken) {
-            // If authentication token is received, store it in session storage
-            sessionStorage.setItem('auth-token', json.authtoken);
+        // Simulate authentication for demo purposes
+        const demoEmail = "demo_profile@example.com";
+        const demoPassword = "password123";
+
+        if (email === demoEmail && password === demoPassword) {
+            // Simulate successful authentication
+            sessionStorage.setItem('auth-token', 'demo-auth-token');
             sessionStorage.setItem('email', email);
             // Redirect to home page and reload the window
             navigate('/frontend_developer_capstone_project');
             window.location.reload();
         } else {
-            // Handle errors if authentication fails
-            if (json.errors) {
-                for (const error of json.errors) {
-                    alert(error.msg);
-                }
-            } else {
-                alert(json.error);
-            }
+            // Simulate error for invalid credentials
+            alert("Invalid email or password. Please use demo_profile@example.com and password123.");
         }
     };
 
@@ -81,12 +64,12 @@ function Login() {
                     <div className="login-form-group">
                         <label htmlFor="email">Email</label>
                         <input value={email} onChange={(e) => setEmail(e.target.value)}
-                            type="email"
-                            name="email"
-                            id="email"
-                            className="login-form-control"
-                            placeholder="Enter your email"
-                            aria-describedby="helpId"
+                               type="email"
+                               name="email"
+                               id="email"
+                               className="login-form-control"
+                               placeholder="Enter your email"
+                               aria-describedby="helpId"
                         />
                     </div>
 
@@ -95,12 +78,12 @@ function Login() {
                         <label htmlFor="password">Password</label>
                         <div className="password-container">
                             <input value={password} onChange={(e) => setPassword(e.target.value)}
-                                type={showPassword ? "text" : "password"}
-                                name="password"
-                                id="password"
-                                className="login-form-control"
-                                placeholder="Enter your password"
-                                aria-describedby="helpId"
+                                   type={showPassword ? "text" : "password"}
+                                   name="password"
+                                   id="password"
+                                   className="login-form-control"
+                                   placeholder="Enter your password"
+                                   aria-describedby="helpId"
                             />
                             <span className="password-toggle-text" onClick={toggleShowPassword}>
                                 {showPassword ? "Hide" : "Show"}
@@ -116,7 +99,7 @@ function Login() {
                     <br />
                     {/* Additional login text for 'Forgot Password' option */}
                     <div className="forgot-password-text">
-                    <Link to="/frontend_developer_capstone_project/password-reset" style={{ color: '#2190FF' }}> Forgot Password? </Link>
+                        <Link to="/frontend_developer_capstone_project/password-reset" style={{ color: '#2190FF' }}> Forgot Password? </Link>
                     </div>
                 </form>
             </div>
